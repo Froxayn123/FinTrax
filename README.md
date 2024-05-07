@@ -4,7 +4,7 @@
   <img width="300" height="300" src="/public/Logo.png">
 </p>
 
-**FinTrax** merupakan Platform pengelola keuangan berbasis web yang dapat membantu dalam mengatur dan mengelola keuangan pribadi dengan lebih efektif, menampilkan grafik statistika pemasukan dan pengeluaran harian/bulanan/tahunan, dan merencanakan goal ataupun tujuan. Memudahkan dalam mengelola keuangan pribadi dengan menggunakan website yang responsive sehingga dapat digunakan di berbagai perangkat. Website ini yang dikembangkan oleh **Tim MateTrix** sebagai proyek akhir pada **Studi Independen Celerates - Web Development & UI/UX Design**.
+**FinTrax** merupakan Platform pengelola keuangan berbasis web yang dapat membantu dalam mengatur dan mengelola keuangan pribadi dengan lebih efektif, menampilkan grafik statistika pemasukan dan pengeluaran harian/bulanan/tahunan, dan merencanakan goal ataupun tujuan. Memudahkan dalam mengelola keuangan pribadi dengan menggunakan website yang responsive sehingga dapat digunakan di berbagai perangkat. Website ini dikembangkan oleh **Tim MateTrix** sebagai proyek akhir pada **Studi Independen Celerates - Web Development & UI/UX Design**.
 
 ## 📝Fitur
 
