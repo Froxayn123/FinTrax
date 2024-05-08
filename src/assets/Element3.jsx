@@ -2,10 +2,10 @@ const Element3 = () => {
   return (
     <div className="w-[205px] relative flex flex-col space-y-16">
       <div className="flex relative">
-        <img src="/public/Avatar1.png" alt="" className="absolute inset-x-[15px] rounded-full" />
-        <img src="/public/Avatar2.png" alt="" className="absolute inset-x-[63px] rounded-full" />
-        <img src="/public/Avatar3.png" alt="" className="absolute inset-x-[103px] rounded-full" />
-        <img src="/public/Avatar1.png" alt="" className="absolute inset-x-[143px] blur-[1px] rounded-full" />
+        <img src="/Avatar1.png" alt="" className="absolute inset-x-[15px] rounded-full" />
+        <img src="/Avatar2.png" alt="" className="absolute inset-x-[63px] rounded-full" />
+        <img src="/Avatar3.png" alt="" className="absolute inset-x-[103px] rounded-full" />
+        <img src="/Avatar1.png" alt="" className="absolute inset-x-[143px] blur-[1px] rounded-full" />
       </div>
       <div className="flex justify-center items-center space-x-3">
         <div>

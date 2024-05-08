@@ -84,7 +84,7 @@ const Element4 = () => {
           />
         </svg>
       </div>
-      <img src="/public/CoinInHand.png" alt="" className="absolute bottom-10 end-14 " />
+      <img src="/CoinInHand.png" alt="" className="absolute bottom-10 end-14 " />
     </div>
   );
 };

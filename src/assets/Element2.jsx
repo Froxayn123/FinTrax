@@ -15,7 +15,7 @@ const Element2 = () => {
           </linearGradient>
         </defs>
       </svg>
-      <img src="/public/TasksImage.png" alt="TaskImage.png" className="absolute top-0" />
+      <img src="/TasksImage.png" alt="TaskImage.png" className="absolute top-0" />
     </div>
   );
 };
