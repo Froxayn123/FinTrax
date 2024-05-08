@@ -3,7 +3,7 @@ import HeroButton from "./HeroButton";
 const HeroIntro = () => {
   return (
     <>
-      <div className="w-[512px] space-y-[24px]">
+      <div className="py-[184px] w-[512px] space-y-[24px]">
         <h1 className="font-roboto text-[45px] text-[#E9E9E9]">
           Take Control of Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DF1AFF] to-[#BE48FF]">Finances</span>
         </h1>
