@@ -7,7 +7,7 @@ const HeroIntro = () => {
         <h1 className="font-roboto text-[45px] text-[#E9E9E9]">
           Take Control of Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Finances</span>
         </h1>
-        <p className="font-roboto text-[16px] text-[#E9E9E9] text-justify">
+        <p className="font-roboto text-[16px] text-[#E9E9E9]">
           Manage your money with ease and confidence. Our tools for tracking income and expenses, creating budgets, and setting financial goals are designed to help you make smarter financial decisions. Discover personalized investment and
           savings recommendations, and explore a wealth of financial tips to guide you toward a brighter financial future.
         </p>
