@@ -1,15 +1,19 @@
 import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import ElementsHero from "../assets/ElementsHero";
 
 const LandingPage = () => {
   return (
     <>
-      <div className="bg-[#001833]">
-        <header>
+      <ElementsHero />
+      <header className="mx-[100px]">
+        <div className="py-[32px]">
           <Navbar />
-        </header>
-        <main></main>
-        <footer></footer>
-      </div>
+        </div>
+        <HeroSection />
+      </header>
+      <main className="mx-[100px]"></main>
+      <footer className="mx-[100px]"></footer>
     </>
   );
 };
