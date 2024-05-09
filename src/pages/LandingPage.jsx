@@ -4,24 +4,29 @@ import ElementsHero from "../assets/ElementsHero";
 import FeaturesSection from "../components/FeaturesSection";
 import ArticlesSection from "../components/ArticlesSection";
 import KeyFeaturesSection from "../components/KeyFeaturesSection";
+import Wave from "../assets/Wave";
 
 const LandingPage = () => {
   return (
     <>
       <ElementsHero />
-      <div className="mx-[100px] space-y-[96px]">
+      <div className="space-y-[400px]">
         <header>
-          <Navbar />
-          <HeroSection />
+          <div className="mx-[100px] ">
+            <Navbar />
+            <HeroSection />
+          </div>
         </header>
         <main>
-          <div className="space-y-[96px]">
+          <div className="mx-[100px]  space-y-[150px]">
             <FeaturesSection />
             <ArticlesSection />
             <KeyFeaturesSection />
           </div>
         </main>
-        <footer></footer>
+        <footer>
+          <Wave />
+        </footer>
       </div>
     </>
   );
