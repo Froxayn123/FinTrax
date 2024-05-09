@@ -10,6 +10,16 @@
 
 **Fitur** dalam FinTrax diantaranya:
 
+◻ **Record Your Income and Expenses**: Add transaction details, categorize expenses, and easily monitor your cash flow.
+
+◻ **Transaction Summary**: You can review all your income and expenses in one place.
+
+◻ **Plan Your Budget**: This feature helps you stay on track to reach your financial goals.
+
+◻ **Customizable Reminders**: Make sure you don't miss important financial tasks with customizable reminders.
+
+◻ **Invest & Saving Recommendations**: Discover tips and strategies to optimize your finances and reach your financial targets.
+
 ## ✏️Kontributor
 
 Dalam pengembangan aplikasi web FinTrax, anggota tim yang terlibat diantaranya:
