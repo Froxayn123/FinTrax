@@ -11,14 +11,7 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="min-h-screen flex items-center justify-center"
-      style={{
-        backgroundImage: `url ("/public/BG Login.jpg")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("BGLogin.jpg")` }}>
       <div className="max-w-4xl w-full p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex items-center">
         <div className="flex-none pr-8">
           <h2 className="text-2xl text-white font-bold mb-4">
@@ -28,7 +21,7 @@ const Login = () => {
             <br /> One Transaction at a<br />
             Time.
           </h2>
-          <img src={"/public/ilustrasi login.png"} alt="Illustration" className="h-auto max-h-72" />
+          <img src={"ilustrasi login.png"} alt="Illustration" className="h-auto max-h-72" />
         </div>
 
         <div className="flex-grow p-8 bg-white bg-opacity-5 flex flex-col justify-center items-center min-h-auto rounded-xl">
