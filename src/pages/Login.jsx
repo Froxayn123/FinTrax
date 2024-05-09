@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import backgroundImage from "../assets/BG Login.jpg";
-import illustrationImage from "../assets/ilustrasi login.png";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -16,7 +14,7 @@ const Login = () => {
     <div
       className="min-h-screen flex items-center justify-center"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url ("/public/BG Login.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -30,7 +28,7 @@ const Login = () => {
             <br /> One Transaction at a<br />
             Time.
           </h2>
-          <img src={illustrationImage} alt="Illustration" className="h-auto max-h-72" />
+          <img src={"/public/ilustrasi login.png"} alt="Illustration" className="h-auto max-h-72" />
         </div>
 
         <div className="flex-grow p-8 bg-white bg-opacity-5 flex flex-col justify-center items-center min-h-auto rounded-xl">
