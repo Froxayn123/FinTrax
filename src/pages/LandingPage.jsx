@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ElementsHero from "../assets/ElementsHero";
 import FeaturesSection from "../components/FeaturesSection";
+import ArticlesSection from "../components/ArticlesSection";
 
 const LandingPage = () => {
   return (
@@ -13,7 +14,10 @@ const LandingPage = () => {
           <HeroSection />
         </header>
         <main>
-          <FeaturesSection />
+          <div className="space-y-[96px]">
+            <FeaturesSection />
+            <ArticlesSection />
+          </div>
         </main>
         <footer></footer>
       </div>

@@ -1,4 +1,4 @@
-import HeroButton from "./HeroButton";
+import Button from "./Button";
 
 const HeroIntro = () => {
   return (
@@ -11,7 +11,7 @@ const HeroIntro = () => {
           Manage your money with ease and confidence. Our tools for tracking income and expenses, creating budgets, and setting financial goals are designed to help you make smarter financial decisions. Discover personalized investment and
           savings recommendations, and explore a wealth of financial tips to guide you toward a brighter financial future.
         </p>
-        <HeroButton />
+        <Button title="get started" />
       </div>
     </>
   );
