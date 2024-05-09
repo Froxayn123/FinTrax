@@ -34,7 +34,7 @@ const Register = () => {
       </div>
       <div className="flex-1 bg-white bg-opacity-5 min-h-auto rounded-xl p-4 justify-center items-center min-h-auto">
       <h3 className="text-3xl text-white font-bold mb-4 text-center">Register</h3>         
-        <div className="p-1">
+        <div className="p-5">
             <div className="flex w-full items-center text-sm relative">
                 <svg className="absolute left-2 bottom-3 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
                 <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
@@ -111,14 +111,15 @@ const Register = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
-          </div>
-          <button 
-            className="bg-purple-600 text-white py-2 px-4 rounded-lg mt-6 w-full hover:bg-purple-700 transition-colors duration-300"
+            <button 
+            className="bg-purple-600 text-white w-full px-4 py-2 rounded-lg pl-10 mb-4 hover:bg-purple-700 transition-colors duration-300"
             onClick={handleRegister}>Register</button>
-          
-          <p className="text-white mt-4 text-center">Or already have an account?{" "} <Link to="/Login" className="text-purple-500 hover:underline">
+
+            <p className="text-white mt-0 text-center">Or already have an account?{" "} <Link to="/Login" className="text-purple-500 hover:underline">
             Login
             </Link></p>
+          </div>
+          
         </div>
     </div>
   </div>
