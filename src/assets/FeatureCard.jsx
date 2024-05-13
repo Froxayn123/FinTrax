@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const FeatureCard = ({ img, title, desc }) => {
   return (
     <>
-      <div className="w-[380px] h-[266px]">
+      <div className="w-[350px] h-[266px]">
         <div>
           <img src={img} alt="" />
         </div>

@@ -5,11 +5,11 @@ import Polygon2 from "../assets/Polygon2";
 const HeroSection = () => {
   return (
     <>
-      <div className="w-full flex justify-start items-center relative">
+      <section className="mt-[140px]">
         <HeroIntro />
         <Polygon1 />
         <Polygon2 />
-      </div>
+      </section>
     </>
   );
 };

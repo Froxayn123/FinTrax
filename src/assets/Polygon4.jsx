@@ -1,7 +1,7 @@
 const Polygon4 = () => {
   return (
     <>
-      <div className="absolute -top-48 start-52">
+      <div className="absolute -bottom-[1200px] start-52">
         <svg width="384" height="447" viewBox="0 0 384 447" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_f_242_26782)">
             <path
