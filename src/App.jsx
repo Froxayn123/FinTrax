@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 
-
 const App = () => {
   return (
     <>
@@ -15,10 +14,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
