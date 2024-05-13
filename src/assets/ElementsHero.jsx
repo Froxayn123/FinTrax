@@ -6,7 +6,7 @@ import Element4 from "./Element4";
 const ElementsHero = () => {
   return (
     <>
-      <div className="absolute end-[625px]">
+      <div className="absolute top-0 end-[625px]">
         <div className="relative">
           <div className="absolute">
             <Element1 />
