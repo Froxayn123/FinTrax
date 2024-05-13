@@ -124,9 +124,9 @@ const Register = () => {
     </div>
   </div>
 
-    </>
+</>
     
-    
+
   );
 }
 
