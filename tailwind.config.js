@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
+    fontFamily: {
+      roboto: ["Roboto", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+      backgroundSize: {
+        "size-200": "200% 200%",
+      },
+      backgroundPosition: {
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
       },
     },
   },
