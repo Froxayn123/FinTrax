@@ -22,7 +22,7 @@ const Register = () => {
   };
   return (
     <>
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("Bg_Register.png")` }}>
+    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("BGLogin.jpg")` }}>
     <div className="max-w-4xl w-full p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex items-center">
       <div className="flex-1 pr-8 top-0">
         <h2 className="text-4xl text-white font-bold mb-16 mr-1">New to our website?
