@@ -11,7 +11,6 @@ import FeaturesSection from "../components/FeaturesSection";
 import ArticlesSection from "../components/ArticlesSection";
 import KeyFeaturesSection from "../components/KeyFeaturesSection";
 import Footer from "../components/Footer";
-import QuizForm from "../components/QuizForm";
 
 const LandingPage = () => {
   return (
@@ -27,7 +26,6 @@ const LandingPage = () => {
       <main className="mx-[100px] space-y-[96px]">
         <HeroSection />
         <FeaturesSection />
-        <QuizForm />
         <ArticlesSection />
         <KeyFeaturesSection />
       </main>
