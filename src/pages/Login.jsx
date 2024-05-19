@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
+
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
+    navigate('/Home')
   };
 
   return (
@@ -33,8 +38,8 @@ const Login = () => {
             <input type="text" placeholder="Username" className="w-full border rounded-lg py-2 px-3 pl-10 mb-4" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div className="flex w-full items-center text-lg relative">
-            <svg className="absolute left-3 bottom-3 transform -translate-y-1/2" width="25" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
-              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />{" "}
+            <svg className="absolute left-3 bottom-4 transform -translate-y-1/2" width="20" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
+              <path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path>
             </svg>
             <input type="password" placeholder="Password" className="w-full border rounded-lg py-2 px-3 pl-10 mb-4" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
@@ -46,17 +51,17 @@ const Login = () => {
               </label>
             </div>
             <div className="w-full lg:w-auto px-3">
-              <Link to="/Register" className="text-blue-500 hover:underline text-sm">
+              <Link to="/Register" className="text-[#CD37FF] hover:underline text-sm">
                 Forget Password ?
               </Link>
             </div>
           </div>
-          <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onClick={handleLogin}>
+          <button className="w-full text-white font-bold py-2 px-4 rounded-lg" style={{ background: 'linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)' }} onClick={handleLogin}>
             Login
           </button>
           <p className="mt-4 text-sm text-white">
             Dont have an account?{" "}
-            <Link to="/Register" className="text-blue-500 hover:underline">
+            <Link to="/Register" className="text-[#CD37FF] hover:underline">
               Register here
             </Link>
           </p>

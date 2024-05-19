@@ -1,4 +1,3 @@
-import React from "react";
 import { TEChart } from "tw-elements-react";
 
 export default function BudgetChart() {
@@ -29,7 +28,7 @@ export default function BudgetChart() {
 
   return (
     <div className="flex p-2 [background:linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%)] shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] backdrop-blur-[7.176966667175293px] rounded-[15px] border-[1.23px] border-solid border-[rgba(255,255,255,0.50)]">
-      <div className="relative w-60 h-60 border-none"> {/* Tambahkan kelas border-none di sini */}
+      <div className="relative w-60 h-60 border-none"> 
         <TEChart
           type="doughnut"
           data={{
