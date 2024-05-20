@@ -7,6 +7,7 @@ import Iconplanning from "../assets/iconplanning";
 import Iconnotif from "../assets/iconnotif";
 import Iconsettings from "../assets/iconsetting";
 import Iconlogout from "../assets/iconlogout";
+import { Link } from "react-router-dom";
 
 const Overview = () => {
   return (
@@ -14,7 +15,9 @@ const Overview = () => {
       <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex">
         <aside className="fixed w-60 h-screen flex flex-col justify-between items-start [background:var(--Blue-Hover-100,#0D243D)]">
           <div className="flex items-center justify-center mb-4 mt-5 ml-4">
-            <img src="/Logo-dasboard.png" alt="Profile" className="ms-auto" />
+            <Link to="/Home">
+              <img src="/Logo-dasboard.png" alt="Profile" className="ms-auto" />
+            </Link>
           </div>
 
           <div className="flex flex-col m-auto mb-2">
@@ -27,7 +30,7 @@ const Overview = () => {
           <nav className="mt-4 flex-1 w-36 ml-10">
             <ul className="space-y-3">
               <li>
-                <a className= "group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
+                <a className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
                   <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300 group-hover:stroke-[#001833]" stroke="#001833">
                     <path d="M16.25 15C16.25 14.3096 16.8096 13.75 17.5 13.75H23.75C24.4404 13.75 25 14.3096 25 15V23.75C25 24.4404 24.4404 25 23.75 25H17.5C16.8096 25 16.25 24.4404 16.25 23.75V15Z" strokeWidth="2" strokeLinecap="round" />
                     <path d="M5 6.25C5 5.55965 5.55965 5 6.25 5H11.25C11.9404 5 12.5 5.55965 12.5 6.25V15C12.5 15.6904 11.9404 16.25 11.25 16.25H6.25C5.55965 16.25 5 15.6904 5 15V6.25Z" strokeWidth="2" strokeLinecap="round" />

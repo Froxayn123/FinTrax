@@ -12,8 +12,11 @@ import ArticlesSection from "../components/ArticlesSection";
 import KeyFeaturesSection from "../components/KeyFeaturesSection";
 import Footer from "../components/Footer";
 import QuizForm from "../components/QuizForm";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const counter = useSelector((state) => state.counterQuiz.counter);
+
   return (
     <>
       <Polygon1 />
@@ -35,7 +38,7 @@ const Home = () => {
       </footer>
       <Polygon5 />
       <Arrow />
-      <QuizForm />
+      {counter === 12 ? "" : <QuizForm />}
     </>
   );
 };
