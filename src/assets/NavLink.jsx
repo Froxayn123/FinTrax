@@ -11,9 +11,9 @@ const NavLink = ({ title, id }) => {
   };
 
   return (
-    <Link className="relative flex justify-center items-center" onMouseEnter={onHover} onMouseLeave={offHover}>
-      <div id={id} className="w-[100px] h-8 opacity-0 border-b-2 border-fuchsia-500 transition-all ease-in-out duration-500"></div>
-      <h1 className="absolute">{title}</h1>
+    <Link className="flex flex-col justify-center items-center" onMouseEnter={onHover} onMouseLeave={offHover}>
+      <h1>{title}</h1>
+      <div id={id} className="h-[2px] self-stretch opacity-0 bg-fuchsia-500 transition-all ease-in-out duration-500"></div>
     </Link>
   );
 };
