@@ -27,7 +27,7 @@ const QuizForm = () => {
     <>
       <section
         id="QuizForm"
-        className="h-[600px] px-8 pt-8 pb-16 fixed top-1/2 left-1/2 -translate-x-[2000px] -translate-y-1/2 transition-all ease-out delay-1000 duration-1000 rounded-[30px] shadow border border-white backdrop-blur-[14.35px] z-50"
+        className="h-[600px] px-8 pt-8 pb-16 fixed top-1/2 left-1/2 -translate-x-[5000px] -translate-y-1/2 transition-all ease-out delay-1000 duration-1000 rounded-[30px] shadow border border-white backdrop-blur-[14.35px] z-50"
       >
         <div className="w-[946px] flex-col justify-center items-start gap-6 inline-flex" onClick={(e) => e.stopPropagation}>
           <div className="self-stretch h-[45px] border-b border-neutral-500 justify-center items-center inline-flex">
