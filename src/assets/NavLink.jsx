@@ -12,7 +12,7 @@ const NavLink = ({ title, id }) => {
 
   return (
     <Link className="relative flex justify-center items-center" onMouseEnter={onHover} onMouseLeave={offHover}>
-      <div id={id} className="w-[98px] h-5 opacity-0 bg-gradient-to-tr from-fuchsia-500 via-fuchsia-500 to-violet-700 rounded-full blur-[15px] transition-all ease-in-out duration-300"></div>
+      <div id={id} className="w-[100px] h-8 opacity-0 border-b-2 border-fuchsia-500 transition-all ease-in-out duration-500"></div>
       <h1 className="absolute">{title}</h1>
     </Link>
   );
