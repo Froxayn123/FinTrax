@@ -12,7 +12,9 @@ const Transaction = () => {
     <div className="flex">
       <aside className="fixed w-60 h-screen flex flex-col justify-between items-start [background:var(--Blue-Hover-100,#0D243D)]">
         <div className="flex items-center justify-center mb-4 mt-5 ml-4">
-          <img src="/Logo-dasboard.png" alt="Profile" className="ms-auto" />
+          <Link to="/Home">
+            <img src="/Logo-dasboard.png" alt="Profile" className="ms-auto" />
+          </Link>
         </div>
 
         <div className="flex flex-col m-auto mb-2">
