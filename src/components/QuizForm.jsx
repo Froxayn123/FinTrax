@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { nextQuestion, previousQuestion } from "../redux/quizSlice";
 import Chooser from "../assets/Chooser";
-import { useEffect } from "react";
 
 const QuizForm = () => {
   const question = useSelector((state) => state.counterQuiz.value);
@@ -14,15 +13,11 @@ const QuizForm = () => {
     chooser.push(<Chooser key={i} text={answers[i]} />);
   }
 
-  useEffect(() => {
-    document.getElementById("QuizForm").style = "transform: translate(1400px,0px);";
-  });
-
   return (
     <>
       <section
         id="QuizForm"
-        className="w-[1010px] h-[609px] px-8 pt-8 pb-16 fixed top-28 -start-[1250px] transition-all ease-out duration-500 bg-slate-900/opacity-90 rounded-[30px] shadow border border-white backdrop-blur-[14.35px] justify-start items-start gap-2.5 inline-flex"
+        className="h-[600px] px-8 pt-8 pb-16 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all ease-out delay-1000 duration-1000 rounded-[30px] shadow border border-white backdrop-blur-[14.35px] z-50 "
       >
         <div className="w-[946px] flex-col justify-center items-start gap-6 inline-flex" onClick={(e) => e.stopPropagation}>
           <div className="self-stretch h-[45px] border-b border-neutral-500 justify-center items-center inline-flex">

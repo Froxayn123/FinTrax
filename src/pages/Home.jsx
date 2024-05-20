@@ -27,7 +27,6 @@ const Home = () => {
       <main className="mx-[100px] space-y-[96px]">
         <HeroSection />
         <FeaturesSection />
-        <QuizForm />
         <ArticlesSection />
         <KeyFeaturesSection />
       </main>
@@ -36,6 +35,7 @@ const Home = () => {
       </footer>
       <Polygon5 />
       <Arrow />
+      <QuizForm />
     </>
   );
 };
