@@ -5,6 +5,7 @@ import Iconplanning from "../assets/iconplanning";
 import Iconnotif from "../assets/iconnotif";
 import Iconsettings from "../assets/iconsetting";
 import Iconlogout from "../assets/iconlogout";
+import { Link } from "react-router-dom";
 
 const Budget = () => {
   return (
@@ -24,19 +25,19 @@ const Budget = () => {
         <nav className="mt-4 flex-1 w-36 ml-10">
           <ul className="space-y-3">
             <li>
-              <a href="/Overview" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+              <Link to="/Overview" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                 <IconOverview />
                 <span className=" text-sm font-bold">Overview</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Transaction" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+              <Link to="/Transaction" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                 <Icontransaksi />
                 <span className="text-sm font-bold">Transaction</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
+              <Link to="#" className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
                 <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#001833">
                   <path d="M22.4062 15.9844C22.4062 20.625 18.6562 24.375 14.0156 24.375C9.375 24.375 5.625 20.625 5.625 15.9844C5.625 11.3437 9.375 7.59375 14.0156 7.59375V15.9844H22.4062Z" strokeWidth="2" strokeLinecap="round" />
                   <path d="M24.375 14.0156C24.375 9.375 20.625 5.625 15.9844 5.625V14.0156H24.375Z" strokeWidth="2" strokeLinecap="round" />
@@ -47,25 +48,25 @@ const Budget = () => {
                   <path d="M21.6563 19.4062L18.3281 16.0312" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 <span className="text-sm font-bold ">Budget</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+              <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                 <Iconplanning />
                 <span className="text-sm font-bold ">Planning</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+              <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                 <Iconnotif />
                 <span className="text-sm font-bold ">Notification</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+              <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                 <Iconsettings />
                 <span className="text-sm font-bold ">Setting</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

@@ -38,7 +38,7 @@ const Home = () => {
       </footer>
       <Polygon5 />
       <Arrow />
-      {counter === 12 ? "" : <QuizForm />}
+      {counter >= 12 ? "" : <QuizForm />}
     </>
   );
 };

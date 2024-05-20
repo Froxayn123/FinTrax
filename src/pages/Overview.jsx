@@ -30,7 +30,7 @@ const Overview = () => {
           <nav className="mt-4 flex-1 w-36 ml-10">
             <ul className="space-y-3">
               <li>
-                <a className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
+                <Link to="#" className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
                   <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300 group-hover:stroke-[#001833]" stroke="#001833">
                     <path d="M16.25 15C16.25 14.3096 16.8096 13.75 17.5 13.75H23.75C24.4404 13.75 25 14.3096 25 15V23.75C25 24.4404 24.4404 25 23.75 25H17.5C16.8096 25 16.25 24.4404 16.25 23.75V15Z" strokeWidth="2" strokeLinecap="round" />
                     <path d="M5 6.25C5 5.55965 5.55965 5 6.25 5H11.25C11.9404 5 12.5 5.55965 12.5 6.25V15C12.5 15.6904 11.9404 16.25 11.25 16.25H6.25C5.55965 16.25 5 15.6904 5 15V6.25Z" strokeWidth="2" strokeLinecap="round" />
@@ -38,37 +38,37 @@ const Overview = () => {
                     <path d="M16.25 6.25C16.25 5.55965 16.8096 5 17.5 5H23.75C24.4404 5 25 5.55965 25 6.25V8.75C25 9.44035 24.4404 10 23.75 10H17.5C16.8096 10 16.25 9.44035 16.25 8.75V6.25Z" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                   <span className=" text-sm font-bold">Overview</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/Transaction" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+                <Link to="/Transaction" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                   <Icontransaksi />
                   <span className="text-sm font-bold">Transaction</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/Budget" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+                <Link to="/Budget" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                   <Iconbudget />
                   <span className="text-sm font-bold ">Budget</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                   <Iconplanning />
                   <span className="text-sm font-bold ">Planning</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                   <Iconnotif />
                   <span className="text-sm font-bold ">Notification</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
+                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
                   <Iconsettings />
                   <span className="text-sm font-bold ">Setting</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
