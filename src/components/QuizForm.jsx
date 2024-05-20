@@ -3,6 +3,7 @@ import { nextQuestion, previousQuestion } from "../redux/quizSlice";
 import Chooser from "../assets/Chooser";
 import anime from "animejs";
 import { useEffect } from "react";
+import Button from "../assets/Button";
 
 const QuizForm = () => {
   const question = useSelector((state) => state.counterQuiz.value);
@@ -39,23 +40,9 @@ const QuizForm = () => {
               <div className="flex-col justify-start items-start gap-4 flex">{chooser}</div>
             </div>
             <div className="flex flex-row-reverse justify-center items-center gap-6 absolute bottom-10 ">
-              {counter === 11 ? (
-                <button className="px-6 py-1.5 bg-gradient-to-b from-purple-700 to-fuchsia-700 text-center text-gray-100 text-sm font-medium font-['Roboto'] leading-tight tracking-tight rounded-lg" onClick={() => dispatch(nextQuestion())}>
-                  Submit
-                </button>
-              ) : (
-                <button className="px-6 py-1.5 bg-gradient-to-b from-purple-700 to-fuchsia-700 text-center text-gray-100 text-sm font-medium font-['Roboto'] leading-tight tracking-tight rounded-lg" onClick={() => dispatch(nextQuestion())}>
-                  Next
-                </button>
-              )}
+              {counter === 11 ? <Button title="submit" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" /> : <Button title="next" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" />}
 
-              {counter === 0 ? (
-                ""
-              ) : (
-                <button className="px-6 py-1.5 rounded-lg text-center border border-gray-100 text-gray-100 text-sm font-medium font-['Roboto'] leading-tight tracking-tight" onClick={() => dispatch(previousQuestion())}>
-                  Back
-                </button>
-              )}
+              {counter === 0 ? "" : <Button title="back" onClick={() => dispatch(previousQuestion())} colors="border border-gray-100" />}
             </div>
           </div>
         </div>
