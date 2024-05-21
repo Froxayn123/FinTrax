@@ -1,7 +1,7 @@
 const Arrow = () => {
   return (
     <>
-      <div className="absolute -bottom-[1700px] start-80">
+      <div className="absolute -bottom-[1700px] start-80 -z-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="255" height="278" viewBox="0 0 255 278" fill="none">
           <g id="Group 10">
             <path id="Vector" d="M214.97 100.093L226.101 118.892L242.765 71.952L197.164 93.8863L214.97 100.093Z" fill="#66AFFF" />

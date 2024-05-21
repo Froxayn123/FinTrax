@@ -1,22 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { nextQuestion, previousQuestion } from "../redux/quizSlice";
-import anime from "animejs";
-import { useEffect } from "react";
 import Button from "../assets/Button";
+import { quizQuestions } from "../data/QuizQuestions";
 
 const QuizForm = () => {
   const question = useSelector((state) => state.counterQuiz.value);
   const counter = useSelector((state) => state.counterQuiz.counter);
   const answers = question[counter].answers;
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    anime({
-      targets: document.getElementById("QuizForm"),
-      translateX: "-50%",
-      translateY: "-50%",
-    });
-  });
 
   return (
     <>
@@ -34,7 +25,11 @@ const QuizForm = () => {
               <div className="flex-col justify-start items-start gap-4 flex">{answers}</div>
             </div>
             <div className="flex flex-row-reverse justify-center items-center gap-6 absolute bottom-10 ">
-              {counter === 11 ? <Button title="submit" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" /> : <Button title="next" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" />}
+              {counter === quizQuestions.length - 1 ? (
+                <Button title="submit" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" />
+              ) : (
+                <Button title="next" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" />
+              )}
 
               {counter === 0 ? "" : <Button title="back" onClick={() => dispatch(previousQuestion())} colors="border border-gray-100" />}
             </div>

@@ -1,4 +1,5 @@
 import Button from "./Button";
+import anime from "animejs";
 
 const HeroIntro = () => {
   return (
@@ -11,7 +12,17 @@ const HeroIntro = () => {
           Manage your money with ease and confidence. Our tools for tracking income and expenses, creating budgets, and setting financial goals are designed to help you make smarter financial decisions. Discover personalized investment and
           savings recommendations, and explore a wealth of financial tips to guide you toward a brighter financial future.
         </p>
-        <Button title="get started" colors={"bg-gradient-primary"} />
+        <Button
+          title="get started"
+          colors={"bg-gradient-primary"}
+          onClick={() => {
+            anime({
+              targets: document.getElementById("QuizForm"),
+              translateX: "-50%",
+              translateY: "-50%",
+            });
+          }}
+        />
       </div>
     </>
   );
