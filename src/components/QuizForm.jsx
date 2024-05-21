@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { nextQuestion, previousQuestion } from "../redux/quizSlice";
-import Chooser from "../assets/Chooser";
 import anime from "animejs";
 import { useEffect } from "react";
 import Button from "../assets/Button";
@@ -10,11 +9,6 @@ const QuizForm = () => {
   const counter = useSelector((state) => state.counterQuiz.counter);
   const answers = question[counter].answers;
   const dispatch = useDispatch();
-
-  let chooser = [];
-  for (let i = 0; i < answers.length; i++) {
-    chooser.push(<Chooser key={i} text={answers[i]} />);
-  }
 
   useEffect(() => {
     anime({
@@ -37,7 +31,7 @@ const QuizForm = () => {
           <div className="self-stretch flex-col justify-start items-start inline-flex">
             <div className="flex-col justify-start items-start gap-8 flex">
               <h1 className="text-gray-100 text-[32px] font-normal font-['Roboto'] leading-10">{question[counter].question}</h1>
-              <div className="flex-col justify-start items-start gap-4 flex">{chooser}</div>
+              <div className="flex-col justify-start items-start gap-4 flex">{answers}</div>
             </div>
             <div className="flex flex-row-reverse justify-center items-center gap-6 absolute bottom-10 ">
               {counter === 11 ? <Button title="submit" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" /> : <Button title="next" onClick={() => dispatch(nextQuestion())} colors="bg-gradient-secondary" />}
