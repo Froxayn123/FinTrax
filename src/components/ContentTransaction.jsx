@@ -43,7 +43,7 @@ const ContentTransaction = () => {
   const categories = ["All Transaction", "Receive", "Payment"];
 
   return (
-    <div className="bg-white bg-opacity-10 border-2 border-white border-opacity-25 p-4 ml-72 mt-12 mr-12 rounded-xl">
+    <div className="bg-white bg-opacity-10 border-2 border-white border-opacity-25 p-4 rounded-xl m-10">
       <div className="mb-4 flex items-center">
         <h1 className="text-white text-3xl font-bold mr-4">Transactions</h1>
         <input
@@ -64,13 +64,13 @@ const ContentTransaction = () => {
           onChange={(e) => setEndDate(e.target.value)}
           className="text-white border bg-transparent border-gray-300 max-w-36 p-1 pl-4 mr-2 placeholder-white rounded-full"
         />
-        <button onClick={handleAddTransaction} className="text-white font-medium py-1 px-4 rounded-lg flex items-center ml-auto hover:bg-blue-400" style={{ background: 'linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)' }}>
+        <button onClick={handleAddTransaction} className="text-white font-medium py-1 px-4 rounded-lg flex items-center ml-auto hover:bg-blue-400" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
           </svg>
           Add Transaction
         </button>
-        <button onClick={handleExport} className="text-white font-medium py-1 px-4 rounded-lg ml-2 flex items-center hover:bg-blue-400"  style={{ background: 'linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)' }}>
+        <button onClick={handleExport} className="text-white font-medium py-1 px-4 rounded-lg ml-2 flex items-center hover:bg-blue-400" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-2" viewBox="0 0 16 16" stroke="currentColor">
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
             <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z" />

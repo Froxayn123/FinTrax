@@ -1,83 +1,14 @@
 import BudgetChart from "../components/Overview/BudgetChart";
 import Summary from "../components/Overview/Summary";
 import Calendar from "../components/Overview/Calendar";
-import Icontransaksi from "../assets/icontransaksi";
-import Iconbudget from "../assets/iconbudget";
-import Iconplanning from "../assets/iconplanning";
-import Iconnotif from "../assets/iconnotif";
-import Iconsettings from "../assets/iconsetting";
-import Iconlogout from "../assets/iconlogout";
-import { Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 const Overview = () => {
   return (
     <>
       <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex">
-        <aside className="fixed w-60 h-screen flex flex-col justify-between items-start [background:var(--Blue-Hover-100,#0D243D)]">
-          <div className="flex items-center justify-center mb-4 mt-5 ml-4">
-            <Link to="/Home">
-              <img src="/Logo-dasboard.png" alt="Profile" className="ms-auto" />
-            </Link>
-          </div>
-
-          <div className="flex flex-col m-auto mb-2">
-            <div className="mt-4 flex flex-col items-center">
-              <img src="/Avatar.png" alt="ProfilDashboard.jsx" className="w-24 h-24 rounded-full" />
-              <h3 className="text-white font-bold mt-4 text-xl">Username</h3>
-            </div>
-          </div>
-
-          <nav className="mt-4 flex-1 w-36 ml-10">
-            <ul className="space-y-3">
-              <li>
-                <Link to="#" className="group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out bg-white text-[#001833]">
-                  <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300 group-hover:stroke-[#001833]" stroke="#001833">
-                    <path d="M16.25 15C16.25 14.3096 16.8096 13.75 17.5 13.75H23.75C24.4404 13.75 25 14.3096 25 15V23.75C25 24.4404 24.4404 25 23.75 25H17.5C16.8096 25 16.25 24.4404 16.25 23.75V15Z" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M5 6.25C5 5.55965 5.55965 5 6.25 5H11.25C11.9404 5 12.5 5.55965 12.5 6.25V15C12.5 15.6904 11.9404 16.25 11.25 16.25H6.25C5.55965 16.25 5 15.6904 5 15V6.25Z" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M5 21.25C5 20.5596 5.55965 20 6.25 20H11.25C11.9404 20 12.5 20.5596 12.5 21.25V23.75C12.5 24.4404 11.9404 25 11.25 25H6.25C5.55965 25 5 24.4404 5 23.75V21.25Z" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M16.25 6.25C16.25 5.55965 16.8096 5 17.5 5H23.75C24.4404 5 25 5.55965 25 6.25V8.75C25 9.44035 24.4404 10 23.75 10H17.5C16.8096 10 16.25 9.44035 16.25 8.75V6.25Z" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                  <span className=" text-sm font-bold">Overview</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/Transaction" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
-                  <Icontransaksi />
-                  <span className="text-sm font-bold">Transaction</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/Budget" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
-                  <Iconbudget />
-                  <span className="text-sm font-bold ">Budget</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
-                  <Iconplanning />
-                  <span className="text-sm font-bold ">Planning</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
-                  <Iconnotif />
-                  <span className="text-sm font-bold ">Notification</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white group flex items-center space-x-2 py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#001833]">
-                  <Iconsettings />
-                  <span className="text-sm font-bold ">Setting</span>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <button className="text-white group mb-5 w-36 [background:var(--Blue-Hover-100,#0D243D)] transition duration-300 ease-in-out py-2 rounded-lg flex items-center justify-center ml-10 space-x-2 outline outline-white hover:bg-white hover:text-[#001833] ">
-            <Iconlogout />
-            <span className="text-sm font-bold ">Logout</span>
-          </button>
-        </aside>
-        <main className="flex-1 pl-7 pr-7 ml-60 mt-12">
+        <Sidebar />
+        <main className="flex-1 pl-7 pr-7 ml-60 mt-12 ms-[280px]">
           <header className="flex justify-between items-center mb-8">
             <div className="flex items-center">
               <h2 className="text-xl font-semibold">Balance:</h2>

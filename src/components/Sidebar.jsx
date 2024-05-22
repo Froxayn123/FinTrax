@@ -6,7 +6,7 @@ import Iconlogout from "../assets/iconlogout";
 const Sidebar = () => {
   return (
     <>
-      <div className="fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px]">
+      <div className="fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50">
         <LogoNavbar />
         <div className="space-y-[48px]">
           <div className="flex flex-col justify-center items-center space-y-[16px]">
