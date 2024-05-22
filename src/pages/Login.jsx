@@ -8,11 +8,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate('/Home')
+    navigate("/home");
   };
 
   return (
@@ -51,17 +50,17 @@ const Login = () => {
               </label>
             </div>
             <div className="w-full lg:w-auto px-3">
-              <Link to="/Register" className="text-[#CD37FF] hover:underline text-sm">
+              <Link to="/register" className="text-[#CD37FF] hover:underline text-sm">
                 Forget Password ?
               </Link>
             </div>
           </div>
-          <button className="w-full text-white font-bold py-2 px-4 rounded-lg" style={{ background: 'linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)' }} onClick={handleLogin}>
+          <button className="w-full text-white font-bold py-2 px-4 rounded-lg" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }} onClick={handleLogin}>
             Login
           </button>
           <p className="mt-4 text-sm text-white">
             Dont have an account?{" "}
-            <Link to="/Register" className="text-[#CD37FF] hover:underline">
+            <Link to="/register" className="text-[#CD37FF] hover:underline">
               Register here
             </Link>
           </p>
