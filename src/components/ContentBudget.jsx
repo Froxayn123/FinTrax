@@ -67,7 +67,7 @@ const ContentBudget = () => {
   const chartSize = 100;
 
   return (
-    <div className="p-4 ml-72 mt-12 mr-12 rounded-xl">
+    <div className="p-4 m-10 rounded-xl">
       <div className="flex justify-between">
         <div className="flex-auto">
           <h1 className="text-white text-3xl font-bold mr-4">Money Allocation</h1>
