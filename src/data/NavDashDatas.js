@@ -10,19 +10,19 @@ export const navDashDatas = [
     id: "navDash1",
     title: "Overview",
     icon: IconOverview(),
-    to: "/Overview",
+    to: "/overview",
   },
   {
     id: "navDash2",
     title: "Transaction",
     icon: icontransaksi(),
-    to: "/Transaction",
+    to: "/transaction",
   },
   {
     id: "navDash3",
     title: "Budget",
     icon: Iconbudget(),
-    to: "/Budget",
+    to: "/budget",
   },
   {
     id: "navDash4",
