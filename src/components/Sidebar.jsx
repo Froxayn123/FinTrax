@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50">
-        <LogoNavbar />
+        <LogoNavbar to="/home" />
         <div className="space-y-[48px]">
           <div className="flex flex-col justify-center items-center space-y-[16px]">
             <img src="/Avatar2.png" alt="" className="w-24 h-24 rounded-full" />
