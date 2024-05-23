@@ -3,14 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
   name: "counterUser",
   initialState: {
-    value: [],
-  },
-  reducers: {
-    nextQuestion: (state) => {
-      state.value.push;
-    },
-    previousQuestion: (state) => {
-      state.value[(state.counter -= 1)];
+    value: {
+      id: 1249812841,
+      userName: "Silvi Putri",
+      email: "silviputri@gmail.com",
+      phoneNumber: 81234567892,
+      avatar: "/Avatar.png",
+      balance: 12500000,
     },
   },
 });
