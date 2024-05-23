@@ -19,9 +19,9 @@ const Sidebar = () => {
             })}
           </div>
         </div>
-        <button className="text-white group w-36 [background:var(--Blue-Hover-100,#0D243D)] transition duration-300 ease-in-out py-2 rounded-lg flex items-center justify-center space-x-2 outline outline-white hover:bg-white hover:text-[#001833]">
+        <button className="text-white group w-36 [background:var(--Blue-Hover-100,#0D243D)] transition duration-300 ease-in-out py-2 rounded-lg flex items-center justify-center space-x-2 outline outline-white hover:bg-white hover:text-[#001833] ">
           <Iconlogout />
-          <span className="text-sm font-bold ">Logout</span>
+          <span className="text-[22px] font-medium font-['Roboto']">Logout</span>
         </button>
       </div>
     </>
