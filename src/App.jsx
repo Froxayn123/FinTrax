@@ -9,6 +9,7 @@ import Overview from "./pages/Overview";
 import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
 import Notification from "./pages/Notification";
+import Blog from "./pages/Blog";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/transaction" element={<Transaction />}></Route>
         <Route path="/budget" element={<Budget />}></Route>
         <Route path="/notification" element={<Notification />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
