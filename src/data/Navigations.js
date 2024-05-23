@@ -4,7 +4,7 @@ export const navigations = [
   {
     id: "nav1",
     title: "home",
-    to: "/home",
+    to: "/",
     icon: UnderNav(),
   },
   {
