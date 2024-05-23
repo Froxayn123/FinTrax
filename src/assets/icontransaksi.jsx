@@ -1,5 +1,5 @@
-const icontransaksi = () => (
-  <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300 group-hover:stroke-[#001833]" stroke="#ffffff">
+const icontransaksi = (strokeColor) => (
+  <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300 group-hover:stroke-[#001833]" stroke={strokeColor}>
     <path d="M19.2188 8.90625L21.0469 8.95313V12.7969" strokeWidth="2" strokeLinecap="round" />
     <path d="M5.625 12.7969H21.1406H24.375V24.375H7.26562C6.375 24.375 5.625 23.625 5.625 22.7344V10.5938C5.625 9.70313 6.375 8.95313 7.26562 8.95313L9.84375 8.90625" strokeWidth="2" strokeLinecap="round" />
     <path d="M21.0469 19.9687H24.375V16.6406H21.0469C20.1563 16.6406 19.4062 17.3906 19.4062 18.2813C19.4062 19.2188 20.1563 19.9687 21.0469 19.9687Z" strokeWidth="2" strokeLinecap="round" />

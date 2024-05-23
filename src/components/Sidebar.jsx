@@ -15,7 +15,7 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col justify-center items-center space-y-[16px]">
             {navDashDatas.map((data, i) => {
-              return <NavDash key={i} title={data.title} icon={data.icon} to={data.to} />;
+              return <NavDash key={i} title={data.title} icon={data.icon} iconSelected={data.iconSelected} to={data.to} />;
             })}
           </div>
         </div>
