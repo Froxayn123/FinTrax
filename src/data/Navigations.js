@@ -1,18 +1,28 @@
+import UnderNav from "../assets/UnderNav";
+
 export const navigations = [
   {
     id: "nav1",
     title: "home",
+    to: "/home",
+    icon: UnderNav(),
   },
   {
     id: "nav2",
     title: "feature",
+    to: "/feature",
+    icon: UnderNav(),
   },
   {
     id: "nav3",
     title: "blog",
+    to: "/blog",
+    icon: UnderNav(),
   },
   {
     id: "nav4",
     title: "about us",
+    to: "/aboutus",
+    icon: UnderNav(),
   },
 ];
