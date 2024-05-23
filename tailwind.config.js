@@ -14,8 +14,9 @@ export default {
         "pos-100": "100% 100%",
       },
       backgroundImage: {
-        "gradient-primary": `linear-gradient(to right, #8C3FD9, #4E2DD1)`,
-        "gradient-secondary": `linear-gradient(to right, #8A00D4, #8F19BD)`,
+        "gradient-primary": "linear-gradient(to right, #8C3FD9, #4E2DD1)",
+        "gradient-secondary": "linear-gradient(to right, #8A00D4, #8F19BD)",
+        "gradient-trinary": "linear-gradient(to right, #FFFFFF9D, #FFFFFF3B)",
       },
     },
   },
