@@ -46,6 +46,6 @@ export const navDashDatas = [
     title: "Setting",
     icon: iconsettings("#ffffff"),
     iconSelected: iconsettings("#001833"),
-    to: "/settings",
+    to: "/setting",
   },
 ];
