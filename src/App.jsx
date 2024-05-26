@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import Verifikasi from "./pages/VerifikasiAkun";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
@@ -20,6 +22,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/ForgotPassword" element={<ForgotPassword />}></Route>
+        <Route path="/ResetPassword" element={<ResetPassword />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/verifikasi" element={<Verifikasi />}></Route>
         <Route path="/home" element={<Home />}></Route>

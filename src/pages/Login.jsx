@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate("/home");
+    navigate("/Overview");
   };
 
   return (
@@ -31,8 +31,8 @@ const Login = () => {
         <div className="flex-grow p-8 bg-white bg-opacity-5 flex flex-col justify-center items-center min-h-auto rounded-xl">
           <h1 className="text-3xl text-white font-bold mb-4">Login</h1>
           <div className="flex w-full items-center text-lg relative">
-            <svg className="absolute left-3 bottom-1 transform -translate-y-1/2" width="30" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
-              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />{" "}
+            <svg className="absolute left-2 bottom-4 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
+              <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
             </svg>
             <input type="text" placeholder="Username" className="w-full border rounded-lg py-2 px-3 pl-10 mb-4" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
@@ -50,8 +50,8 @@ const Login = () => {
               </label>
             </div>
             <div className="w-full lg:w-auto px-3">
-              <Link to="/register" className="text-[#CD37FF] hover:underline text-sm">
-                Forget Password ?
+              <Link to="/ForgotPassword" className="text-[#CD37FF] hover:underline text-sm">
+                Forgot Password ?
               </Link>
             </div>
           </div>
