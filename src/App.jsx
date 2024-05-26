@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
+import Planning from "./pages/Planning";
 import Notification from "./pages/Notification";
 import Blog from "./pages/Blog";
 import Setting from "./pages/Setting";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/overview" element={<Overview />}></Route>
         <Route path="/transaction" element={<Transaction />}></Route>
         <Route path="/budget" element={<Budget />}></Route>
+        <Route path="/planning" element={<Planning />}></Route>
         <Route path="/notification" element={<Notification />}></Route>
         <Route path="/Setting" element={<Setting/>} />
         <Route path="/blog" element={<Blog />}></Route>
