@@ -7,7 +7,7 @@ const Verifikasi = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/Login");
+      navigate("/Overview");
     }, 5000);
     return () => clearTimeout(timer);
   }, [navigate]);
