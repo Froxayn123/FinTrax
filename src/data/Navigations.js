@@ -22,7 +22,7 @@ export const navigations = [
   {
     id: "nav4",
     title: "about us",
-    to: "/aboutus",
+    to: "/about",
     icon: UnderNav(),
   },
 ];

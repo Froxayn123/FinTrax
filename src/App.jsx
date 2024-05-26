@@ -12,6 +12,7 @@ import Planning from "./pages/Planning";
 import Notification from "./pages/Notification";
 import Blog from "./pages/Blog";
 import Setting from "./pages/Setting";
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/notification" element={<Notification />}></Route>
         <Route path="/Setting" element={<Setting/>} />
         <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/about" element={<About/>}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
