@@ -8,7 +8,7 @@ const Overview = () => {
     <>
       <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex">
         <Sidebar />
-        <main className="flex-1 pl-7 pr-7 ml-60 mt-12 ms-[280px]">
+        <main className="flex-1 pl-7 pr-7 ml-72 mt-12 ms-[280px]">
           <header className="flex justify-between items-center mb-8">
             <div className="flex items-center">
               <h2 className="text-xl font-semibold">Balance:</h2>
@@ -61,7 +61,7 @@ const Overview = () => {
               <ul>
                 <li className="flex justify-between items-center my-1">
                   <div className="flex items-center">
-                    <img src="/F&B.png" alt="" className="w-8 h-9 mr-5 mb-4" />
+                    <img src="/FoodBeverages.png" alt="" className="w-8 h-9 mr-5 mb-4" />
                     <div className="flex flex-col space-y-1">
                       <div className="text-sm">Food & Beverages</div>
                       <div className="text-sm">Mie Gacoan</div>
