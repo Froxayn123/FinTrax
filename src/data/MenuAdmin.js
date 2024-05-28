@@ -16,13 +16,13 @@ export const navigations = [
   {
     id: "nav3",
     title: "Content",
-    to: "/ContentAdmin",
+    to: "/AdminContent",
     icon: UnderNav(),
   },
   {
     id: "nav4",
     title: "Settings",
-    to: "/SettingsAdmin",
+    to: "/AdminSettings",
     icon: UnderNav(),
   },
 ];

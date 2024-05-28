@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import userData from "../data/UserData";
+import contentData from "../data/ContentData";
 
-const TableUser = () => {
+const TableContent = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredUsers, setFilteredUsers] = useState(userData);
+  const [filteredUsers, setFilteredUsers] = useState(contentData);
 
   useEffect(() => {
-    const results = userData.filter((user) => user.name.toLowerCase().includes(searchTerm.toLowerCase()) || user.email.toLowerCase().includes(searchTerm.toLowerCase()));
+    const results = contentData.filter((user) => user.title.toLowerCase().includes(searchTerm.toLowerCase()) || user.status.toLowerCase().includes(searchTerm.toLowerCase()));
     setFilteredUsers(results);
   }, [searchTerm]);
 
@@ -67,9 +67,9 @@ const TableUser = () => {
           <thead className="border-b-2 border-white">
             <tr>
               <th className="py-2 px-4 bg-transparent text-white font-normal text-start">No</th>
-              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Name</th>
-              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Email</th>
-              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Registration Date</th>
+              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Title</th>
+              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Date Published</th>
+              <th className="py-2 px-4 bg-transparent text-white font-normal text-start">Status</th>
               <th className="py-2 px-4 bg-transparent text-white font-normal text-end">Actions</th>
             </tr>
           </thead>
@@ -77,12 +77,9 @@ const TableUser = () => {
             {currentUsers.map((user, index) => (
               <tr key={index} className="border-b-2 border-[#555558] ">
                 <td className="px-4 py-2">{user.id}</td>
-                <td className="px-4 py-2 flex items-center">
-                  <img src={user.profileImg} alt="Profile" className="w-8 h-8 rounded-full mr-2" />
-                  {user.name}
-                </td>
-                <td className="px-4 py-2">{user.email}</td>
-                <td className="px-4 py-2">{user.registrationDate}</td>
+                <td className="px-4 py-2">{user.title}</td>
+                <td className="px-4 py-2">{user.datepublished}</td>
+                <td className="px-4 py-2">{user.status}</td>
                 <td className="px-4 py-2">
                   <div className="flex justify-end space-x-2">
                     <button className="items-center px-2 py-2 bg-[#8F19BD] text-[14px] text-white rounded hover:bg-blue-600">
@@ -122,4 +119,4 @@ const TableUser = () => {
   );
 };
 
-export default TableUser;
+export default TableContent;
