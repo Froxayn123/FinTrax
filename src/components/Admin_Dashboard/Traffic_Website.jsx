@@ -11,7 +11,7 @@ const Traffic_Website = () => {
         { name: 'Twitter', value: 25 },
       ];
     
-      // Find the maximum value to normalize the widths
+     
       const maxValue = Math.max(...data.map(item => item.value));
     
       return (

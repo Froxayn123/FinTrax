@@ -15,13 +15,13 @@ export default function Traffic_Location() {
     "rgba(237, 242, 247, 1)",
   ];
 
-  const data = [52.1, 22.8, 13.9, 11.2]; // Persentase sesuai data pada gambar
+  const data = [52.1, 22.8, 13.9, 11.2]; 
 
   return (
-    <div className="flex flex-col lg:flex-row p-6 bg-dark rounded-lg"> {/* Gunakan flex-col untuk kolom vertikal di layar kecil */}
+    <div className="flex flex-col lg:flex-row p-6 bg-dark rounded-lg"> 
       <div className="flex-shrink-0">
         <h2 className="text-start text-lg font-semibold mb-4 lg:mb-16 ml-4 text-white">Traffic by Location</h2>
-        <div className="w-full lg:w-80 h-60 lg:mx-auto"> {/* Gunakan unit persentase dan mx-auto untuk sentralisasi di layar kecil */}
+        <div className="w-full lg:w-80 h-60 lg:mx-auto"> 
           <TEChart
             type="doughnut"
             data={{
@@ -31,13 +31,13 @@ export default function Traffic_Location() {
                   label: "Traffic",
                   data: data,
                   backgroundColor: backgroundColor,
-                  borderColor: "#000", // Mengatur warna border
-                  borderWidth: 1, // Mengatur ketebalan border
+                  borderColor: "#000", 
+                  borderWidth: 1, 
                 },
               ],
             }}
             options={{
-              cutout: '70%', // Mengatur persentase pemotongan untuk memperbesar lingkaran dalam
+              cutout: '70%', 
               plugins: {
                 legend: {
                   display: false
@@ -51,7 +51,7 @@ export default function Traffic_Location() {
           />
         </div>
       </div>
-      <div className="lg:ml-10 lg:mt-32 mt-10 text-white"> {/* Tambahkan margin atas pada layar kecil untuk spasi */}
+      <div className="lg:ml-10 lg:mt-32 mt-10 text-white"> 
         <ul>
           <li className="mb-6 flex items-center justify-between w-full font-semibold">
             <div className="flex items-center text-lg">
@@ -65,21 +65,21 @@ export default function Traffic_Location() {
               <span className="w-4 h-4 mr-2 inline-block rounded-full" style={{ backgroundColor: "rgba(153, 202, 255, 1)" }}></span>
               Malaysia
             </div>
-            <div className="ml-8 lg:ml-40 text-lg">22.8%</div> {/* Gunakan margin lebih kecil di layar kecil */}
+            <div className="ml-8 lg:ml-40 text-lg">22.8%</div> 
           </li>
           <li className="mb-6 flex items-center justify-between w-full font-semibold">
             <div className="flex items-center text-lg">
               <span className="w-4 h-4 mr-2 inline-block rounded-full" style={{ backgroundColor: "rgba(174, 233, 189, 1)" }}></span>
               Singapore
             </div>
-            <div className="ml-8 lg:ml-40 text-lg">13.9%</div> {/* Gunakan margin lebih kecil di layar kecil */}
+            <div className="ml-8 lg:ml-40 text-lg">13.9%</div> 
           </li>
           <li className="flex items-center justify-between w-full font-semibold">
             <div className="flex items-center text-lg">
               <span className="w-4 h-4 mr-2 inline-block rounded-full" style={{ backgroundColor: "rgba(237, 242, 247, 1)" }}></span>
               Other
             </div>
-            <div className="ml-8 lg:ml-40 text-lg">11.2%</div> {/* Gunakan margin lebih kecil di layar kecil */}
+            <div className="ml-8 lg:ml-40 text-lg">11.2%</div> 
           </li>
         </ul>
       </div>
