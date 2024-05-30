@@ -19,8 +19,8 @@ export default function Traffic_Location() {
 
   return (
     <div className="flex flex-col lg:flex-row p-6 bg-dark rounded-lg"> {/* Gunakan flex-col untuk kolom vertikal di layar kecil */}
-      <div>
-        <h2 className="text-start text-lg font-semibold mb-4 lg:mb-20 ml-4 text-white">Traffic by Location</h2>
+      <div className="flex-shrink-0">
+        <h2 className="text-start text-lg font-semibold mb-4 lg:mb-16 ml-4 text-white">Traffic by Location</h2>
         <div className="w-full lg:w-80 h-60 lg:mx-auto"> {/* Gunakan unit persentase dan mx-auto untuk sentralisasi di layar kecil */}
           <TEChart
             type="doughnut"
@@ -43,15 +43,15 @@ export default function Traffic_Location() {
                   display: false
                 },
                 tooltip: {
-                  enabled: false,  // Menonaktifkan tooltip
+                  enabled: false,  
                 },
               },
-              maintainAspectRatio: false, // Agar chart mengikuti ukuran yang diberikan
+              maintainAspectRatio: false, 
             }}
           />
         </div>
       </div>
-      <div className="lg:ml-10 lg:mt-32 text-white "> {/* Gunakan margin atas untuk layar kecil */}
+      <div className="lg:ml-10 lg:mt-32 mt-10 text-white"> {/* Tambahkan margin atas pada layar kecil untuk spasi */}
         <ul>
           <li className="mb-6 flex items-center justify-between w-full font-semibold">
             <div className="flex items-center text-lg">
