@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DeleteAccountModal from '../components/DeleteAccountModal';
 import Sidebar from '../components/Sidebar';
 
@@ -149,7 +149,7 @@ const Subscribe = () => (
   <div>
     <div className="flex flex-col items-center">
         <img src="/Sub.png" alt="Profile" className="w-42 h-42 mb-4" />
-        <h2 className="text-2xl font-medium mb-4">You Haven't subscribed yet :(</h2>
+        <h2 className="text-2xl font-medium mb-4">You Haven{"'"}t subscribed yet :</h2>
         <button className="px-6 py-2 bg-purple-800 text-white rounded-full hover:bg-purple-600">Subscribe Now</button>
     </div>
   </div>

@@ -16,7 +16,8 @@ import Blog from "./pages/Blog";
 import Setting from "./pages/Setting";
 import About from "./pages/About"; 
 import AdminUser from "./pages/AdminUser"; 
-import AdminContent from "./pages/AdminContent"; 
+import AdminContent from "./pages/AdminContent";
+import AdminSetting from "./pages/AdminSetting";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/AdminUser" element={<AdminUser/>}></Route>
         <Route path="/AdminContent" element={<AdminContent/>}></Route>
+        <Route path="/AdminSetting" element={<AdminSetting/>}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>

@@ -22,7 +22,7 @@ export const navigations = [
   {
     id: "nav4",
     title: "Settings",
-    to: "/AdminSettings",
+    to: "/AdminSetting",
     icon: UnderNav(),
   },
 ];

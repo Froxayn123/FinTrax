@@ -1,0 +1,111 @@
+// src/data/userData.js
+const UserPermissionsData = [
+    {
+      id: 1,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser1.png",
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser2.png",
+    },
+    {
+      id: 3,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Admin",
+      profileImg: "/AvatarUser3.png",
+    },
+    {
+      id: 4,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser4.png",
+    },
+    {
+      id: 5,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser5.png",
+    },
+    {
+      id: 6,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Member",
+      profileImg: "/AvatarUser1.png",
+    },
+    {
+      id: 7,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Member",
+      profileImg: "/AvatarUser2.png",
+    },
+    {
+      id: 8,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Member",
+      profileImg: "/AvatarUser3.png",
+    },
+    {
+      id: 9,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser4.png",
+    },
+    {
+      id: 10,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser5.png",
+    },
+    {
+      id: 11,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser1.png",
+    },
+    {
+      id: 12,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser2.png",
+    },
+    {
+      id: 13,
+      name: "John Doe",
+      email: "johndoe@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser3.png",
+    },
+    {
+      id: 14,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser4.png",
+    },
+    {
+      id: 15,
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      typeaccess: "Super Admin",
+      profileImg: "/AvatarUser5.png",
+    },
+  ];
+  
+  export default UserPermissionsData;
+  
