@@ -85,7 +85,7 @@ const ResetPassword = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${isMobile ? "bg-MobileLogin.jpg" : "BGLogin.jpg"})` }}>
-      <div className="sm:max-w-2xl sm:w-full sm:p-8 p-4 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
+      <div className="sm:max-w-2xl w-96 sm:w-full sm:p-8 p-4 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
         <h1 className="sm:text-5xl text-4xl text-white font-semibold mb-2">Setup New Password</h1>
         <p className="mb-4 sm:text-lg text-white">
           Have you already reset the password ?{" "}
