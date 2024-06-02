@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -9,8 +9,21 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleRegister = () => {
     // Logika pendaftaran bisa ditambahkan di sini
@@ -26,21 +39,20 @@ const Register = () => {
   };
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("BGLogin.jpg")` }}>
-        <div className="max-w-4xl w-full p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex items-center">
-          <div className="flex-1 pr-8 top-0">
-            <h2 className="text-2xl text-white font-bold mb-16 mr-1">
+      <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${isMobile ? "bg-MobileLogin.jpg" : "BGLogin.jpg"})` }}>
+      <div className="max-w-4xl w-full p-4 sm:p-8 bg-none sm:bg-blue-500 sm:bg-opacity-20 sm:shadow-xl rounded-3xl flex flex-col sm:flex-row items-center">
+      <div className="hidden sm:block flex-none sm:pr-8 mb-4 sm:mb-0">
+            <h2 className="text-2xl sm:text-3xl text-white font-bold mb-8 sm:mb-16 mr-1 text-center sm:text-left">
               New to our website?
               <br /> No problem! Sign up
               <br />
               now
             </h2>
             <div className="flex justify-center mb-4">
-              <img src="/dompet.png" alt="Wallet" className="h-auto max-h-72 " />
+              <img src="/dompet.png" alt="Wallet" className="h-auto max-h-72" />
             </div>
           </div>
-          <div className="flex-1 bg-white bg-opacity-5 min-h-auto rounded-xl p-4 justify-center items-center min-h-auto">
-            <h3 className="text-3xl text-white font-bold mb-4 text-center">Register</h3>
+          <div className="flex-1 w-96 sm:bg-white sm:bg-opacity-5 bg-[#007AFF] bg-opacity-20 min-h-auto rounded-xl p-4 sm:p-8 justify-center items-center">            <h3 className="text-3xl text-white font-bold mb-4 text-center">Register</h3>
             <div className="p-5">
               <div className="flex w-full items-center text-sm relative">
                 <svg className="absolute left-2 bottom-4 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
@@ -106,7 +118,7 @@ const Register = () => {
                 />
               </div>
 
-              <div className="flex w-full items-center text-sm relative">
+              <div className="flex w-full mb-6 items-center text-sm relative">
                 <svg className="absolute left-2 bottom-4 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
                   <path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path>
                 </svg>

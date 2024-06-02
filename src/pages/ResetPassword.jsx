@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
@@ -9,6 +8,7 @@ const ResetPassword = () => {
   const [passwordStrength, setPasswordStrength] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   const evaluatePasswordStrength = (password) => {
     let strength = "";
@@ -25,6 +25,18 @@ const ResetPassword = () => {
     }
     return strength;
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handlePasswordChange = (e) => {
     const password = e.target.value;
@@ -72,10 +84,10 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("BGLogin.jpg")` }}>
-      <div className="max-w-2xl w-full p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
-        <h1 className="text-5xl text-white font-semibold mb-2">Setup New Password</h1>
-        <p className="mb-4 text-lg text-white">
+    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${isMobile ? "bg-MobileLogin.jpg" : "BGLogin.jpg"})` }}>
+      <div className="sm:max-w-2xl sm:w-full sm:p-8 p-4 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
+        <h1 className="sm:text-5xl text-4xl text-white font-semibold mb-2">Setup New Password</h1>
+        <p className="mb-4 sm:text-lg text-white">
           Have you already reset the password ?{" "}
           <Link to="/register" className="text-[#CD37FF] hover:underline">
             Sign in
@@ -95,10 +107,10 @@ const ResetPassword = () => {
         </div>
         <div className="w-3/4 flex items-center mb-4">
           <input type="checkbox" id="terms" checked={termsAccepted} onChange={() => setTermsAccepted(!termsAccepted)} className="mr-2" />
-          <label htmlFor="terms" className="text-white">I Accept the Terms</label>
+          <label htmlFor="terms" className="text-white sm:text-sm">I Accept the Terms</label>
         </div>
         <button
-          className={`w-3/4 text-white font-bold py-2 px-4 rounded-lg ${termsAccepted ? "" : "opacity-50 cursor-not-allowed"}`}
+          className={`w-3/4 text-white font-bold py-2 px-4 mb-2 rounded-lg ${termsAccepted ? "" : "opacity-50 cursor-not-allowed"}`}
           style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}
           onClick={handleReset}
           disabled={!termsAccepted}

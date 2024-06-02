@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleSubmit = () => {
     console.log("Email:", email);
@@ -11,8 +25,8 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url("BGLogin.jpg")` }}>
-      <div className="max-w-2xl w-full h-96 p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
+    <div className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${isMobile ? "bg-MobileLogin.jpg" : "BGLogin.jpg"})` }}>
+      <div className="max-w-2xl sm:w-full h-96 p-8 bg-blue-500 bg-opacity-20 shadow-xl rounded-3xl flex flex-col items-center">
         <h1 className="text-5xl text-white font-semibold mb-4 mt-3">Forgot Password ?</h1>
         <p className="text-lg text-center text-white mb-10">Enter your email to reset your password.</p>
         <div className="flex w-2/3 items-center text-lg relative mb-10">
