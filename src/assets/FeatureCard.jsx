@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const FeatureCard = ({ img, title, desc, onClick }) => {
   return (
-    <div className="w-[350px] h-[266px] cursor-pointer" onClick={onClick}>
+    <div className="w-[350px] h-[266px] pl-2 hover:bg-white hover:bg-opacity-10 rounded-lg cursor-pointer" onClick={onClick}>
       <div>
         <img src={img} alt="" />
       </div>
