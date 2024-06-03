@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const DeleteAccountModal = ({ isOpen, closeModal }) => {
   const [confirmationText, setConfirmationText] = useState('');

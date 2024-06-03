@@ -24,7 +24,7 @@ const Login = () => {
   const handleLogin = () => {
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate("/Overview");
+    navigate("/Home");
   };
 
   return (

@@ -1,66 +1,9 @@
 import { useState } from "react";
+import BudgetCard from "./BudgetCard";
+import BudgetModal from "./BudgetModal";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import PropTypes from "prop-types";
-
-const Card = ({ imgSrc, title, price, onButtonClick }) => (
-  <div className="relative flex items-center bg-white bg-opacity-5 border-2 border-white border-opacity-20 p-4 rounded-2xl shadow-md">
-    <div className="absolute top-2 right-2">
-      <button className="bg-white bg-opacity-10 border border-white border-opacity-20 text-white rounded-full w-8 h-8 flex items-center justify-center" onClick={onButtonClick}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-plus" viewBox="0 0 16 16">
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-        </svg>
-      </button>
-    </div>
-    <div>
-      <img src={imgSrc} alt={title} className="w-12 h-12 mr-4" />
-      <h3 className="text-white text-lg font-medium">{title}</h3>
-      <p className="text-gray-400">{price}</p>
-    </div>
-  </div>
-);
-
-Card.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
-};
-
-const Modal = ({ isOpen, onClose, onSave }) => {
-  const [inputValue, setInputValue] = useState("");
-
-  if (!isOpen) return null;
-
-  const handleSave = () => {
-    onSave(parseFloat(inputValue));
-    setInputValue("");
-  };
-
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-[#001833] bg-opacity-90 border-2 border-white border-opacity-20 p-4 rounded-xl">
-        <h2 className="text-xl font-bold mb-4 text-white border-b-2 border-[#797979] pb-2 pr-40">Enter the Budget Amount</h2>
-        <input type="number" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="bg-transparent border border-white p-2 mb-4 w-full rounded-lg text-white" placeholder="Ex.100.000" />
-        <div className="flex justify-start">
-          <button onClick={onClose} className="bg-transparent px-2 py-1 rounded-xl mr-4 text-white border border-white">
-            Cancel
-          </button>
-          <button onClick={handleSave} className=" text-white px-5 py-1 rounded-xl" style={{ background: 'linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)' }}>
-            Ok
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-Modal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  onSave: PropTypes.func.isRequired,
-};
 
 const ContentBudget = () => {
   const [prices, setPrices] = useState({
@@ -219,10 +162,10 @@ const ContentBudget = () => {
       </div>
       <div className="mt-8 grid grid-cols-4 gap-20 gap-y-10">
         {Object.keys(prices).map((category) => (
-          <Card key={category} imgSrc={`/${category.replace(/ & | /g, "")}.png`} title={category} price={`Rp. ${prices[category]}.000`} onButtonClick={() => handleCardButtonClick(category)} />
+          <BudgetCard key={category} imgSrc={`/${category.replace(/ & | /g, "")}.png`} title={category} price={`Rp. ${prices[category]}.000`} onButtonClick={() => handleCardButtonClick(category)} />
         ))}
       </div>
-      <Modal isOpen={modalIsOpen} onClose={handleModalClose} onSave={handleModalSave} />
+      <BudgetModal isOpen={modalIsOpen} onClose={handleModalClose} onSave={handleModalSave} />
     </div>
   );
 };

@@ -1,7 +1,19 @@
-import FeatureCard from "../assets/FeatureCard";
-import { features } from "../data/Features";
+import { useState } from 'react';
+import FeatureCard from '../assets/FeatureCard';
+import { features } from '../data/Features';
+import FeaturePopup from '../assets/FeaturePopup'; // Adjust the path if necessary
 
 const FeaturesSection = () => {
+  const [selectedFeature, setSelectedFeature] = useState(null);
+
+  const handleCardClick = (feature) => {
+    setSelectedFeature(feature);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedFeature(null);
+  };
+
   return (
     <>
       <section className="grid grid-cols-3 gap-[54px] place-content-start place-items-start">
@@ -14,10 +26,22 @@ const FeaturesSection = () => {
             <p className="text-gray-200 text-base font-normal font-['Roboto'] leading-normal tracking-wide">Discover a suite of features designed to help you take control of your finances.</p>
           </div>
         </div>
-        {features.map((feature, i) => {
-          return <FeatureCard key={i} img={feature.img} title={feature.title} desc={feature.desc} />;
-        })}
+        {features.map((feature) => (
+          <FeatureCard
+            key={feature.id}
+            img={feature.img}
+            title={feature.title}
+            desc={feature.desc}
+            onClick={() => handleCardClick(feature)}
+          />
+        ))}
       </section>
+      {selectedFeature && (
+        <FeaturePopup
+          feature={selectedFeature}
+          onClose={handleClosePopup}
+        />
+      )}
     </>
   );
 };
