@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import AddTransactionModal from '../components/AddTransactionModal';
 import SavingModal from '../components/SavingModal';
 import PlanModal from '../components/PlanModal';
+import TransactionSummary from '../components/TransactionSummary';
+import CustomizableReminders from '../components/CustomizableReminders';
 
 const FeaturePopup = ({ feature, onClose }) => {
   if (!feature) return null;
@@ -9,8 +11,12 @@ const FeaturePopup = ({ feature, onClose }) => {
   const renderModal = () => {
     if (feature.id === 'feature1') {
       return <AddTransactionModal isOpen={true} onClose={onClose} onAddTransaction={() => {}} />;
-    } else if (feature.id === 'feature5') {
+    }else if (feature.id === 'feature2') {
+      return <TransactionSummary isOpen={true} onClose={onClose} />;
+    }else if (feature.id === 'feature5') {
       return <SavingModal isOpen={true} onClose={onClose} />;
+    }else if (feature.id === 'feature4') {
+      return <CustomizableReminders isOpen={true} onClose={onClose} />;
     } else if (feature.id === 'feature3') {
       return <PlanModal isOpen={true} onClose={onClose} />;
     } else {
