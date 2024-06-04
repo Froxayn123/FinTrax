@@ -10,7 +10,7 @@ export const navigations = [
   {
     id: "nav2",
     title: "feature",
-    to: "/feature",
+    to: "/#feature-section",
     icon: UnderNav(),
   },
   {

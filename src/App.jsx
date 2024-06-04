@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
@@ -21,29 +22,38 @@ import AdminSetting from "./pages/AdminSetting";
 import Dashboard_Admin from "./pages/Dashboard_Admin";
 
 const App = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    const element = document.getElementById(location.hash.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/ForgotPassword" element={<ForgotPassword />}></Route>
-        <Route path="/ResetPassword" element={<ResetPassword />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/verifikasi" element={<Verifikasi />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/overview" element={<Overview />}></Route>
-        <Route path="/transaction" element={<Transaction />}></Route>
-        <Route path="/budget" element={<Budget />}></Route>
-        <Route path="/planning" element={<Planning />}></Route>
-        <Route path="/notification" element={<Notification />}></Route>
-        <Route path="/Setting" element={<Setting/>} />
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/AdminDashboard" element={<Dashboard_Admin/>}></Route>
-        <Route path="/AdminUser" element={<AdminUser/>}></Route>
-        <Route path="/AdminContent" element={<AdminContent/>}></Route>
-        <Route path="/AdminSetting" element={<AdminSetting/>}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/verifikasi" element={<Verifikasi />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/transaction" element={<Transaction />} />
+        <Route path="/budget" element={<Budget />} />
+        <Route path="/planning" element={<Planning />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/Setting" element={<Setting />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/AdminDashboard" element={<Dashboard_Admin />} />
+        <Route path="/AdminUser" element={<AdminUser />} />
+        <Route path="/AdminContent" element={<AdminContent />} />
+        <Route path="/AdminSetting" element={<AdminSetting />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import FeatureCard from '../assets/FeatureCard';
 import { features } from '../data/Features';
-import FeaturePopup from '../assets/FeaturePopup'; // Adjust the path if necessary
+import FeaturePopup from '../assets/FeaturePopup';
 
 const FeaturesSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
@@ -16,7 +16,7 @@ const FeaturesSection = () => {
 
   return (
     <>
-      <section className="grid grid-cols-3 gap-[54px] place-content-start place-items-start">
+      <section id="feature-section" className="grid grid-cols-3 gap-[54px] place-content-start place-items-start">
         <div className="w-[350px] h-[266px] flex flex-col justify-center items-start space-y-[24px]">
           <div>
             <h1 className="text-gray-100 text-[40px] font-bold font-['Roboto'] leading-[48px]">Featured Tools</h1>
