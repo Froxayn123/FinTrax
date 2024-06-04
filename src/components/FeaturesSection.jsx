@@ -16,7 +16,7 @@ const FeaturesSection = () => {
 
   return (
     <>
-      <section id="feature-section" className="grid grid-cols-3 gap-[54px] place-content-start place-items-start">
+      <section id="feature-section" className="grid grid-cols-3 gap-[54px] place-content-start place-items-start pt-[96px]">
         <div className="w-[350px] h-[266px] flex flex-col justify-center items-start space-y-[24px]">
           <div>
             <h1 className="text-gray-100 text-[40px] font-bold font-['Roboto'] leading-[48px]">Featured Tools</h1>

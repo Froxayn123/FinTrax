@@ -23,7 +23,7 @@ const LandingPage = () => {
       <header className="mx-[100px]">
         <Navbar />
       </header>
-      <main className="mx-[100px] space-y-[96px]">
+      <main className="mx-[100px]">
         <HeroSection />
         <FeaturesSection />
         <ArticlesSection />

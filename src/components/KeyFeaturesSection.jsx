@@ -4,7 +4,7 @@ import KeyFeature2 from "../assets/KeyFeature2";
 const KeyFeaturesSection = () => {
   return (
     <>
-      <section className="flex justify-evenly items-center py-[100px]">
+      <section className="flex justify-evenly items-center py-[100px] mt-[96px]">
         <h1 className="w-[590px] text-gray-200 text-[40px] font-bold font-['Roboto'] leading-[48px]">Key Features</h1>
         <div className="py-[20px] flex justify-center items-center space-x-[40px]">
           <div className="flex flex-col justify-start items-center">
