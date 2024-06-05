@@ -1,4 +1,3 @@
-import React from 'react'
 import Polygon1 from '../assets/Polygon1'
 import Polygon3 from '../assets/Polygon3'
 import Navbar from '../components/Navbar'

@@ -49,9 +49,6 @@ export const FooterDatas = {
       name: "Link",
       link: [
         {
-          text: "User guide",
-        },
-        {
           text: "Privacy policy",
         },
         {

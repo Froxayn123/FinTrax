@@ -16,6 +16,8 @@ import Notification from "./pages/Notification";
 import Blog from "./pages/Blog";
 import Setting from "./pages/Setting";
 import About from "./pages/About"; 
+import PrivacyPolicy from "./pages/PrivacyPolicy"; 
+import FinancialTips from "./pages/FinancialTips"; 
 import AdminUser from "./pages/AdminUser"; 
 import AdminContent from "./pages/AdminContent";
 import AdminSetting from "./pages/AdminSetting";
@@ -49,6 +51,8 @@ const App = () => {
         <Route path="/Setting" element={<Setting />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/FinancialTips" element={<FinancialTips />} />
         <Route path="/AdminDashboard" element={<Dashboard_Admin />} />
         <Route path="/AdminUser" element={<AdminUser />} />
         <Route path="/AdminContent" element={<AdminContent />} />
