@@ -22,6 +22,7 @@ import AdminUser from "./pages/AdminUser";
 import AdminContent from "./pages/AdminContent";
 import AdminSetting from "./pages/AdminSetting";
 import Dashboard_Admin from "./pages/Dashboard_Admin";
+import Treams from "./pages/Treams";
 
 const App = () => {
   const location = useLocation();
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/Treams" element={<Treams />}></Route>
         <Route path="/FinancialTips" element={<FinancialTips />} />
         <Route path="/AdminDashboard" element={<Dashboard_Admin />} />
         <Route path="/AdminUser" element={<AdminUser />} />
