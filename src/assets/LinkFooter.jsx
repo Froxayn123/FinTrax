@@ -1,20 +1,19 @@
+// LinkFooter.js
+import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const LinkFooter = ({ icon, text, href }) => {  
+const LinkFooter = ({ text, to }) => {
   return (
-    <>
-      <a href={href}  className="flex justify-center items-center space-x-3">
-        {icon}
-        <p className="text-white text-sm font-normal font-['Roboto'] leading-tight tracking-tight">{text}</p>
-      </a>
-      
-    </>
+    <Link to={to} className="text-white text-sm font-normal font-['Roboto'] leading-tight tracking-tight">
+      {text}
+    </Link>
   );
 };
 
 LinkFooter.propTypes = {
-  icon: PropTypes.object,
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired
 };
 
 export default LinkFooter;
