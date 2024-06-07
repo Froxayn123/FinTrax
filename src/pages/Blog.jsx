@@ -23,8 +23,8 @@ const Blog = () => {
             </p>
           </div>
           <div className="w-full grid grid-cols-3 gap-16 place-items-center">
-            {BlogDatas.map((data, i) => {
-              return <BlogCard key={i} title={data.title} img={data.img} desc={data.desc} />;
+            {BlogDatas.map((data) => {
+              return <BlogCard key={data.id} title={data.title} img={data.img} desc={data.desc} id={data.id} />;
             })}
           </div>
         </div>

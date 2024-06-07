@@ -14,6 +14,7 @@ import Budget from "./pages/Budget";
 import Planning from "./pages/Planning";
 import Notification from "./pages/Notification";
 import Blog from "./pages/Blog";
+import BlogDetail from "./components/BlogDetail";
 import Setting from "./pages/Setting";
 import About from "./pages/About"; 
 import PrivacyPolicy from "./pages/PrivacyPolicy"; 
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="/notification" element={<Notification />} />
         <Route path="/Setting" element={<Setting />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Treams" element={<Treams />}></Route>
