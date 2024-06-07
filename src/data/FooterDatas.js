@@ -47,14 +47,16 @@ export const FooterDatas = {
     },
     {
       name: "Link",
-      link: [
-        {
-          text: "Privacy policy",
-        },
-        {
-          text: "Terms & condition",
-        },
-      ],
+        link: [
+          {
+            text: "Privacy policy",
+            href: "/PrivacyPolicy"
+          },
+          {
+            text: "Terms & condition",
+            href: "/Treams"
+          },
+        ],
     },
   ],
 };
