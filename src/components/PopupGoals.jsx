@@ -13,7 +13,7 @@ const PopupGoals = ({
   handleGenerateClick,
 }) => (
   <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-    <div className="bg-[#001833] bg-opacity-90 border-2 border-white border-opacity-20 p-6 rounded-xl shadow-lg w-screen mr-28 ml-96">
+    <div className="bg-[#001833] bg-opacity-90 border-2 border-white border-opacity-20 p-6 rounded-xl shadow-lg w-[1010px]">
       <h2 className="text-2xl text-white mb-4 flex items-center justify-center pb-2 border-b-2 border-[#797979]">
         {activeButton && (
           <img
@@ -58,7 +58,7 @@ const PopupGoals = ({
           className="bg-transparent text-white border border-white w-full p-2 rounded-lg"
         />
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between mt-[32px]">
         <button
           className="p-2 w-2/3 rounded-xl mr-2 shadow-lg bg-transparent border border-white text-white"
           onClick={handleClosePopup}
