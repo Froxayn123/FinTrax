@@ -7,7 +7,7 @@ const Notification = () => {
     <>
       <div className="flex">
         <Sidebar />
-        <div className="ms-[280px] w-full">
+        <div className="w-full">
           <div>
             <h1 className="p-16 text-white text-4xl font-semibold font-['Roboto']">Notification</h1>
             <div className="flex flex-col justify-center items-center space-y-3">

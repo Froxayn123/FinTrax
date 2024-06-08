@@ -11,7 +11,6 @@ const AccountInformation = () => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    // Logika untuk menyimpan data (misalnya, panggilan API) bisa ditambahkan di sini
     console.log({ name, email, phoneNumber, age, address });
   };
 
@@ -254,7 +253,7 @@ const Setting = () => {
   return (
     <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex">
       <Sidebar />
-      <main className="flex-1 pl-16 pr-16 ml-60 mt-10">
+      <main className="flex-1 pl-16 pr-16 mt-10">
         <section className="grid grid-cols-4 gap-2">
           <div className="col-span-4 p-4 relative flex items-center justify-between w-full [background:linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%)] shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] backdrop-blur-[7.176966667175293px] rounded-[15px] border-[1.23px] border-solid border-[rgba(255,255,255,0.50)]">
             <div className="flex flex-col items-center gap-2 self-stretch border-r-[color:var(--Placeholder,#797979)] pt-8 pb-16 border-r border-solid">

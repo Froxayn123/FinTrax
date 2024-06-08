@@ -5,7 +5,7 @@ const Budget = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-grow ms-[280px]">
+      <div className="flex-grow">
         <ContentBudget />
       </div>
     </div>

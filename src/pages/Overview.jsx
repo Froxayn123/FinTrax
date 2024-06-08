@@ -8,7 +8,7 @@ const Overview = () => {
     <>
       <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex">
         <Sidebar />
-        <main className="flex-1 pl-7 pr-7 ml-72 mt-12 ms-[280px]">
+        <main className="flex-1 pl-7 pr-7 mt-12">
           <header className="flex justify-between items-center mb-8">
             <div className="flex items-center">
               <h2 className="text-xl font-semibold">Balance:</h2>

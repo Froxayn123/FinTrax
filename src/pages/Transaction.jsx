@@ -5,7 +5,7 @@ const Transaction = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="ms-[280px] flex-grow">
+      <div className="mt-12 flex-grow">
         <ContentTransaction />
       </div>
     </div>

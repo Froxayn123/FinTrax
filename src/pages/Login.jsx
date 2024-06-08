@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +22,26 @@ const Login = () => {
     };
   }, []);
 
-  const handleLogin = () => {
+  const handleLogin = async (e) => {
+    e.preventDefault()
+      try {
+          const data = await axios.post(
+              `${import.meta.env.VITE_APP_BASE_API}/login`,
+              {
+                  email : username,
+                  password : password,
+              },
+              {
+                  headers: {
+                      'Content-Type': 'application/json',
+                      Accept: 'application/json',
+                  },
+              }
+          );
+         console.log(data)
+      } catch (error) {
+          console.log(error)
+      }
     console.log("Username:", username);
     console.log("Password:", password);
     navigate("/Home");
@@ -41,7 +61,7 @@ const Login = () => {
           <img src={"ilustrasi login.png"} alt="Illustration" className="h-auto max-h-48 sm:max-h-72 mx-auto sm:mx-0" />
         </div>
 
-        <div className="flex-grow w-96 p-8 sm:p-8 sm:bg-white sm:bg-opacity-5 bg-[#007AFF] bg-opacity-20 flex flex-col justify-center items-center min-h-auto rounded-xl">
+        <form onSubmit={handleLogin} className="flex-grow w-96 p-8 sm:p-8 sm:bg-white sm:bg-opacity-5 bg-[#007AFF] bg-opacity-20 flex flex-col justify-center items-center min-h-auto rounded-xl">
           <h1 className="text-2xl sm:text-3xl text-white font-bold mb-4">Login</h1>
           <div className="flex w-full items-center text-lg relative mb-4">
             <svg className="absolute left-2 top-5 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
@@ -77,7 +97,7 @@ const Login = () => {
               Register here
             </Link>
           </p>
-        </div>
+        </form>
       </div>
     </div>
   );
