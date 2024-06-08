@@ -50,9 +50,11 @@ export const FooterDatas = {
       link: [
         {
           text: "Privacy policy",
+          to: "/PrivacyPolicy"
         },
         {
           text: "Terms & condition",
+          to: "/Treams"
         },
       ],
     },
