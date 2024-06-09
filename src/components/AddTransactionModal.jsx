@@ -66,7 +66,7 @@ const AddTransactionModal = ({ isOpen, onClose, onAddTransaction }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-[#001833] bg-opacity-90 px-10 rounded-2xl border-2 border-white border-opacity-20 shadow-lg relative">
+      <div className="w-[900px] bg-[#001833] bg-opacity-90 px-10 rounded-2xl border-2 border-white border-opacity-20 shadow-lg relative">
         <button onClick={onClose} className="absolute top-2 left-2 text-white text-xl focus:outline-none flex items-center ml-7 mt-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
@@ -75,20 +75,20 @@ const AddTransactionModal = ({ isOpen, onClose, onAddTransaction }) => {
         </button>
         <h2 className="text-xl py-5 px-40 font-semibold text-white mb-4 text-center border-b border-[#797979]">Record Your Income and Expenses</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+          <div className="mb-8">
             <label className="block text-white mb-2">Select Type of Transaction</label>
             <div className="flex space-x-2">
-              <button type="button" onClick={() => handleCategoryChange("Payment")} className={`px-3 py-1.5 rounded-lg ${newTransaction.category === "Payment" ? "bg-[#8A00D4] text-white" : "bg-transparent border border-white text-white"}`}>
+              <button type="button" onClick={() => handleCategoryChange("Payment")} className={`w-[140px] h-[45px] px-3 py-1.5 rounded-lg ${newTransaction.category === "Payment" ? "bg-[#8A00D4] text-white" : "bg-transparent border border-white text-white"}`}>
                 Add Income
               </button>
-              <button type="button" onClick={() => handleCategoryChange("Receive")} className={`px-3 py-1.5 rounded-lg ${newTransaction.category === "Receive" ? "bg-[#8A00D4] text-white" : "bg-transparent border border-white text-white"}`}>
+              <button type="button" onClick={() => handleCategoryChange("Receive")} className={`w-[140px] h-[45px] px-3 py-1.5 rounded-lg ${newTransaction.category === "Receive" ? "bg-[#8A00D4] text-white" : "bg-transparent border border-white text-white"}`}>
                 Add Expenses
               </button>
             </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-8">
             <label className="block text-white mb-2">Select Category</label>
-            <select name="name" value={newTransaction.name} onChange={handleChange} className="w-full p-1 px-4 bg-transparent border border-white text-white rounded-lg">
+            <select name="name" value={newTransaction.name} onChange={handleChange} className="w-full h-[50px] p-1 px-4 bg-transparent border border-white text-white rounded-lg">
               {Object.keys(nameIconMapping).map((name) => (
                 <option key={name} value={name} className="text-black">
                   {name}
@@ -96,19 +96,19 @@ const AddTransactionModal = ({ isOpen, onClose, onAddTransaction }) => {
               ))}
             </select>
           </div>
-          <div className="mb-4">
+          <div className="mb-8">
             <label className="block text-white mb-2">Amount</label>
-            <input type="number" name="amount" value={newTransaction.amount} onChange={handleChange} placeholder="Enter the transaction amount" className="w-full p-1 px-4 bg-transparent text-white border border-white rounded-lg" required />
+            <input type="number" name="amount" value={newTransaction.amount} onChange={handleChange} placeholder="Enter the transaction amount" className="w-full h-[50px] p-1 px-4 bg-transparent text-white border border-white rounded-lg" required />
           </div>
           <div className="mb-8">
             <label className="block text-white mb-2">Transaction Detail</label>
-            <input type="text" name="description" value={newTransaction.description} onChange={handleChange} placeholder="Ex.Buy shoes Nike " className="w-full  p-1 px-4 bg-transparent text-white border border-white rounded-lg" />
+            <input type="text" name="description" value={newTransaction.description} onChange={handleChange} placeholder="Ex.Buy shoes Nike " className="w-full h-[50px]  p-1 px-4 bg-transparent text-white border border-white rounded-lg" />
           </div>
           <div className="flex justify-center mb-5">
-            <button type="button" onClick={onClose} className="mr-2 px-4 py-1 bg-transparant border text-white rounded-lg hover:bg-[#8A00D4] hover:border-[#8A00D4]">
+            <button type="button" onClick={onClose} className="w-[150px] h-[50px] mr-4 px-4 py-1 bg-transparant border text-white rounded-lg hover:bg-[#8A00D4] hover:border-[#8A00D4]">
               Cancel
             </button>
-            <button type="submit" className="px-4 py-1 bg-[#8A00D4] text-white rounded-lg">
+            <button type="submit" className="w-[150px] h-[50px] px-4 py-1 bg-[#8A00D4] text-white rounded-lg">
               Save
             </button>
           </div>

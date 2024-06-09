@@ -20,8 +20,8 @@ const AccountInformation = () => {
       <form className="flex flex-wrap justify-between gap-4" onSubmit={handleSave}>
         <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5">
           <div className="flex items-center gap-4">
-            <img src="/Avatar.png" alt="Profile" className="rounded-full w-14 h-14" />
-            <button className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">
+            <img src="/Avatar.png" alt="Profile" className="rounded-full w-16 h-16" />
+            <button className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded [500px] h-[55px]">
               Change Profile Photo
             </button>
           </div>
@@ -29,7 +29,7 @@ const AccountInformation = () => {
             <label className="block mb-1">Name</label>
             <input
               type="text"
-              className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
+              className="w-[500px] h-[55px] px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -38,7 +38,7 @@ const AccountInformation = () => {
             <label className="block mb-1">Email</label>
             <input
               type="email"
-              className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
+              className="w-[500px] h-[55px] px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -46,21 +46,21 @@ const AccountInformation = () => {
           <div className="w-full text-purple-400 cursor-pointer hover:underline">
             Change Password
           </div>
-          <div className="w-full mt-20">
+          <div className="w-full mt-10">
             <button
               type="submit"
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded"
+              className="w-[250px] h-[55px] bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg"
             >
               Save
             </button>
           </div>
         </div>
-        <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5 mt-[-1rem]">
+        <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5 mt-[-1.5rem]">
           <div className="w-full">
             <label className="block mb-1">Phone Number</label>
             <input
               type="tel"
-              className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
+              className="w-[500px] h-[55px] px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
@@ -68,7 +68,7 @@ const AccountInformation = () => {
           <div className="w-full">
             <label className="block mb-1">Age</label>
             <select
-              className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
+              className="w-[500px] h-[55px] px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
               value={age}
               onChange={(e) => setAge(e.target.value)}
             >
@@ -80,7 +80,7 @@ const AccountInformation = () => {
           <div className="w-full">
             <label className="block mb-1">Address</label>
             <select
-              className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
+              className="w-[500px] h-[55px] px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
             >
@@ -101,10 +101,10 @@ const Preference = () => (
     <div>
     <h2 className="text-2xl font-semibold mb-6">Preference</h2>
     <form className="flex flex-wrap justify-between gap-4">
-    <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5 mt-[-1rem]">
+    <div className="flex flex-col w-[500px] md:w-[calc(50%-0.5rem)] gap-5 mt-[-1rem]">
     <div className="w-full">
           <label className="block mb-1">Notification</label>
-          <select className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
+          <select className="w-[500px] h-[55px]  px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
             <option className="bg-gray-700 text-white border-purple-500" value="Push Notification">Push Notification</option>
             <option className="bg-gray-700 text-white border-purple-500" value="Push Notification">Push Notification</option>
             <option className="bg-gray-700 text-white border-purple-500" value="Push Notification">Push Notification</option>
@@ -112,7 +112,7 @@ const Preference = () => (
         </div>
         <div className="w-full">
           <label className="block mb-1">Currency</label>
-          <select className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
+          <select className="w-[500px] h-[55px]  px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
             <option className="bg-gray-700 text-white border-purple-500" value="Rupia">Rupia</option>
             <option className="bg-gray-700 text-white border-purple-500" value="Ringgit">Euro</option>
             <option className="bg-gray-700 text-white border-purple-500" value="Dolar">Dolar</option>
@@ -120,7 +120,7 @@ const Preference = () => (
         </div>
         <div className="w-full">
           <label className="block mb-1">Text Font</label>
-          <select className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
+          <select className="w-[500px] h-[55px]  px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
             <option className="bg-gray-700 text-white border-purple-500" value="100%">100%</option>
             <option className="bg-gray-700 text-white border-purple-500" value="75%">75%</option>
             <option className="bg-gray-700 text-white border-purple-500" value="50%">50%</option>
@@ -131,7 +131,7 @@ const Preference = () => (
       <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5 mt-[-1rem]">
         <div className="w-full">
           <label className="block mb-1">Themes</label>
-          <select className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
+          <select className="w-[500px] h-[55px]  px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500">
             <option className="bg-gray-700 text-white border-purple-500" value="Default System">Default System</option>
             <option className="bg-gray-700 text-white border-purple-500" value="Default System">Dark System</option>
           </select>
@@ -214,7 +214,7 @@ const Help = () => (
               <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
               <textarea id="message" name="message" rows="4" className="w-full px-3 py-2 bg-transparent text-white rounded border border-white focus:outline-none focus:border-purple-500" placeholder="Tell us your problem"></textarea>
             </div>
-            <button type="submit" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg">Submit</button>
+            <button type="submit" className="bg-purple-600 h-[55px] w-[250px] hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg">Submit</button>
             </form>
             <div className="mt-8">
                 <p className="text-gray-400">Live Chat: <a href="#" className="text-indigo-400 hover:underline">[Link to initiate chat]</a></p>

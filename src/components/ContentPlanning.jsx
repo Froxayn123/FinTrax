@@ -158,7 +158,7 @@ const ContentPlanning = () => {
                 Understanding your risk profile is crucial for making informed investment decisions. Your risk profile helps us tailor investment recommendations that align with your financial goals and comfort level.
               </p>
               <button className="w-full mt-28 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
-                Learn More
+              Start the questionnaire
               </button>
             </div>
           }
@@ -212,7 +212,7 @@ const ContentPlanning = () => {
                 </div>
               </div>
               <button className="w-full mt-14 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
-                Activate Reminder
+              Activate Reminder
               </button>
             </div>
           }
