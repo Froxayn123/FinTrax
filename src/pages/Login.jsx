@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
@@ -23,28 +23,31 @@ const Login = () => {
   }, []);
 
   const handleLogin = async (e) => {
-    e.preventDefault()
-      try {
-          const data = await axios.post(
-              `${import.meta.env.VITE_APP_BASE_API}/login`,
-              {
-                  email : username,
-                  password : password,
-              },
-              {
-                  headers: {
-                      'Content-Type': 'application/json',
-                      Accept: 'application/json',
-                  },
-              }
-          );
-         console.log(data)
-      } catch (error) {
-          console.log(error)
-      }
-    console.log("Username:", username);
-    console.log("Password:", password);
-    navigate("/Home");
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_APP_BASE_API}/login`,
+        {
+          email: email,
+          password: password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
+
+      console.log(response.data);
+
+      // Navigate to the Home page on successful login
+      navigate("/Home");
+    } catch (error) {
+      // Log the error response from the server
+      console.error("Login error:", error.response ? error.response.data : error.message);
+    }
   };
 
   return (
@@ -67,7 +70,7 @@ const Login = () => {
             <svg className="absolute left-2 top-5 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
               <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
             </svg>
-            <input type="text" placeholder="Username" className="w-full border rounded-lg py-2 px-3 pl-10" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" placeholder="Username" className="w-full border rounded-lg py-2 px-3 pl-10" value={email} onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div className="flex w-full items-center text-lg relative mb-4">
             <svg className="absolute left-3 top-5 transform -translate-y-1/2" width="20" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
@@ -88,7 +91,7 @@ const Login = () => {
               </Link>
             </div>
           </div>
-          <button className="w-full text-white font-bold py-2 px-4 rounded-lg" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }} onClick={handleLogin}>
+          <button className="w-full text-white font-bold py-2 px-4 rounded-lg" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
             Login
           </button>
           <p className="mt-4 text-sm text-white">
