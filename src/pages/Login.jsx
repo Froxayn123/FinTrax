@@ -42,10 +42,8 @@ const Login = () => {
 
       console.log(response.data);
 
-      // Navigate to the Home page on successful login
       navigate("/Home");
     } catch (error) {
-      // Log the error response from the server
       console.error("Login error:", error.response ? error.response.data : error.message);
     }
   };
