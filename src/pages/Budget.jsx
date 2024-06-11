@@ -6,7 +6,7 @@ const Budget = () => {
     <div className="flex">
       <Sidebar />
       <div className="flex-grow">
-        <ContentBudget />
+        <ContentBudget/>
       </div>
     </div>
   );

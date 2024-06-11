@@ -111,56 +111,58 @@ const ContentBudget = () => {
   const chartSize = 100;
 
   return (
-    <div className="p-4 ml-12 mt-12 mr-12 rounded-xl">
-      <div className="flex justify-between">
-        <div className="flex-auto">
-          <h1 className="text-white text-3xl font-bold mr-4">Money Allocation</h1>
-          <div className="flex">
-            <div className="mt-4 mr-4">
-              <label className="block text-white text-xl font-medium">Income</label>
-              <input type="text" className="bg-transparent mt-2 p-2 rounded border border-white w-52 text-white" placeholder="Ex.100.000" />
-            </div>
-            <div className="mt-4">
-              <label className="block text-white text-xl font-medium">Budgeting Rules</label>
-              <select className="bg-transparent mt-2 p-2 rounded border border-white w-52 text-white">
-                <option value="rule1" className="text-black">
-                  50/30/20
-                </option>
-                <option value="rule2" className="text-black">
-                  70/20/10
-                </option>
-                <option value="rule3" className="text-black">
-                  60/30/10
-                </option>
-              </select>
+    <div className="p-4 md:mt-2 mt-10 mr-2 rounded-xl">
+      <div className="flex-none md:flex justify-normal md:justify-between mb-[32px]">
+        <div className="flex flex-col">
+          <div className="flex-none md:flex-auto">
+            <h1 className="text-white text-3xl font-bold mb-4">Money Allocation</h1>
+            <div className="flex">
+              <div className="mb-4 mr-4">
+                <label className="block text-white text-xl font-medium">Income</label>
+                <input type="text" className="bg-transparent mt-2 p-2 rounded border border-white w-[200px] text-white" placeholder="Ex.100.000" />
+              </div>
+              <div className="mb-4">
+                <label className="block text-white text-xl font-medium">Budgeting Rules</label>
+                <select className="bg-transparent mt-2 p-2 rounded border border-white w-[200px] text-white">
+                  <option value="rule1" className="text-black">
+                    50/30/20
+                  </option>
+                  <option value="rule2" className="text-black">
+                    70/20/10
+                  </option>
+                  <option value="rule3" className="text-black">
+                    60/30/10
+                  </option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="flex flex-col items-center mx-4">
+        <div className="flex flex-wrap justify-around">
+          <div className="flex flex-col items-center mb-2 md:mb-0">
             <div style={{ width: chartSize, height: chartSize }}>
               <Doughnut data={dataNeeds} options={options} plugins={[ChartDataLabels]} />
             </div>
-            <h2 className="text-white text-xl font-medium text-center">Needs</h2>
-            <h3 className="text-white text-lg text-center">Rp. 840K</h3>
+            <h2 className="text-white text-xl font-medium mt-2">Needs</h2>
+            <h3 className="text-white text-lg mt-1">Rp. 840K</h3>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-2 md:mb-0">
             <div style={{ width: chartSize, height: chartSize }}>
               <Doughnut data={dataWants} options={options} plugins={[ChartDataLabels]} />
             </div>
-            <h2 className="text-white text-xl font-medium text-center">Wants</h2>
-            <h3 className="text-white text-lg text-center">Rp. 560K</h3>
+            <h2 className="text-white text-xl font-medium mt-2">Wants</h2>
+            <h3 className="text-white text-lg mt-1">Rp. 560K</h3>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-2 md:mb-0">
             <div style={{ width: chartSize, height: chartSize }}>
               <Doughnut data={dataSavings} options={options} plugins={[ChartDataLabels]} />
             </div>
-            <h2 className="text-white text-xl font-medium text-center">Savings</h2>
-            <h3 className="text-white text-lg text-center">Rp. 1.4M</h3>
+            <h2 className="text-white text-xl font-medium mt-2">Savings</h2>
+            <h3 className="text-white text-lg mt-1">Rp. 1.4M</h3>
           </div>
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-4 gap-20 gap-y-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {Object.keys(prices).map((category) => (
           <BudgetCard key={category} imgSrc={`/${category.replace(/ & | /g, "")}.png`} title={category} price={`Rp. ${prices[category]}.000`} onButtonClick={() => handleCardButtonClick(category)} />
         ))}

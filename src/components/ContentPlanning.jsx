@@ -146,9 +146,12 @@ const ContentPlanning = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="grid grid-cols-2 gap-4">
-        <Card title="Goals" content={<Goals goals={goals} activeButton={activeButton} handleButtonClick={handleButtonClick} handleApplyClick={handleApplyClick} />} />
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <Card
+          title="Goals"
+          content={<Goals goals={goals} activeButton={activeButton} handleButtonClick={handleButtonClick} handleApplyClick={handleApplyClick} />}
+        />
         <Card
           title="Know your risk profile"
           content={
@@ -157,32 +160,34 @@ const ContentPlanning = () => {
               <p className="text-center text-lg mb-2">
                 Understanding your risk profile is crucial for making informed investment decisions. Your risk profile helps us tailor investment recommendations that align with your financial goals and comfort level.
               </p>
-              <button className="w-full mt-28 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
-              Start the questionnaire
+              <button className="w-full mt-10 lg:mt-28 p-2 text-lg text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
+                Start the questionnaire
               </button>
             </div>
           }
         />
-
+  
         <Card
           title="Systematic Investment Plan (SIP)"
           content={
             <div className="flex flex-col items-center justify-center">
-              <div className="mb-5 w-full">
-                <label htmlFor="investmentValue" className="text-xl font-semibold mb-2 block">
+              <div className="mb-4 w-full">
+                <label htmlFor="investmentValue" className="text-lg font-semibold mb-2 block">
                   Investment Value
                 </label>
                 <input type="number" id="investmentValue" placeholder="Ex: Rp5.000.000" className="bg-transparent border border-gray-300 rounded-lg p-2 w-full" />
               </div>
-              <div className="text-xl font-semibold mb-5 mr-auto">
-                <label className="text-xl font-semibold mb-2 block">Frequency:</label>
-                <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 hover:bg-blue-500 hover:border-blue-500">Day</button>
-                <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 hover:bg-blue-500 hover:border-blue-500">Weekly</button>
-                <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 hover:bg-blue-500 hover:border-blue-500">Monthly</button>
+              <div className="text-lg font-semibold mb-4">
+                <label className="text-lg font-semibold mb-2 block">Frequency:</label>
+                <div className="flex flex-wrap justify-center">
+                  <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 mb-2 hover:bg-blue-500 hover:border-blue-500">Day</button>
+                  <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 mb-2 hover:bg-blue-500 hover:border-blue-500">Weekly</button>
+                  <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 mb-2 hover:bg-blue-500 hover:border-blue-500">Monthly</button>
+                </div>
               </div>
-              <div className="flex justify-center mb-10 w-full">
-                <div className="w-full mr-4">
-                  <label htmlFor="everyDate" className="text-xl font-semibold mb-2 block">
+              <div className="flex flex-col lg:flex-row mb-8 w-full">
+                <div className="w-full mb-4 lg:mb-0 lg:mr-4">
+                  <label htmlFor="everyDate" className="text-lg font-semibold mb-2 block">
                     Every Date:
                   </label>
                   <select id="everyDate" className="border border-white bg-transparent rounded-lg p-2 w-full">
@@ -198,7 +203,7 @@ const ContentPlanning = () => {
                   </select>
                 </div>
                 <div className="w-full">
-                  <label htmlFor="until" className="text-xl font-semibold mb-2 block">
+                  <label htmlFor="until" className="text-lg font-semibold mb-2 block">
                     Until:
                   </label>
                   <select id="until" className="border border-white bg-transparent rounded-lg p-2 w-full">
@@ -211,53 +216,51 @@ const ContentPlanning = () => {
                   </select>
                 </div>
               </div>
-              <button className="w-full mt-14 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
-              Activate Reminder
+              <button className="w-full p-2 text-lg text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
+                Activate Reminder
               </button>
             </div>
           }
         />
-
+  
         <Card
           title="Investment Simulation"
           content={
             <div className="flex flex-col items-center justify-center">
-              <div className="flex justify-center mb-5 w-full">
-                <div className="mb-5 mr-2 w-full">
-                  <label htmlFor="initialInvestment" className="text-xl font-semibold mb-2 block">
-                    Initial Investment
-                  </label>
-                  <input
-                    type="number"
-                    id="initialInvestment"
-                    placeholder="Ex: Rp5.000.000"
-                    value={initialInvestment}
-                    onChange={(e) => setInitialInvestment(e.target.value)}
-                    className="bg-transparent border border-gray-300 rounded-lg p-2 w-full"
-                  />
-                </div>
-                <div className="mb-5 ml-2 w-full">
-                  <label htmlFor="monthlyInvestment" className="text-xl font-semibold mb-2 block">
-                    Monthly Investment
-                  </label>
-                  <input
-                    type="number"
-                    id="monthlyInvestment"
-                    placeholder="Ex: Rp5.000.000"
-                    value={monthlyInvestment}
-                    onChange={(e) => setMonthlyInvestment(e.target.value)}
-                    className="bg-transparent border border-gray-300 rounded-lg p-2 w-full"
-                  />
-                </div>
+              <div className="flex flex-col mb-4 w-full">
+                <label htmlFor="initialInvestment" className="text-lg font-semibold mb-2 block">
+                  Initial Investment
+                </label>
+                <input
+                  type="number"
+                  id="initialInvestment"
+                  placeholder="Ex: Rp5.000.000"
+                  value={initialInvestment}
+                  onChange={(e) => setInitialInvestment(e.target.value)}
+                  className="bg-transparent border border-gray-300 rounded-lg p-2 w-full"
+                />
               </div>
-              <div className="w-full">
+              <div className="flex flex-col w-full">
+                <label htmlFor="monthlyInvestment" className="text-lg font-semibold mb-2 block">
+                  Monthly Investment
+                </label>
+                <input
+                  type="number"
+                  id="monthlyInvestment"
+                  placeholder="Ex: Rp5.000.000"
+                  value={monthlyInvestment}
+                  onChange={(e) => setMonthlyInvestment(e.target.value)}
+                  className="bg-transparent border border-gray-300 rounded-lg p-2 w-full"
+                />
+              </div>
+              <div className="w-full mt-4">
                 <Line data={data} />
               </div>
             </div>
           }
         />
       </div>
-
+  
       {showPopup && (
         <PopupGoals
           goals={goals}
@@ -272,10 +275,11 @@ const ContentPlanning = () => {
           handleGenerateClick={handleGenerateClick}
         />
       )}
-
+  
       {showInsight && <Insight insight={insight} handleCloseInsight={handleCloseInsight} />}
     </div>
   );
+  
 };
 
 export default ContentPlanning;

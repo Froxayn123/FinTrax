@@ -73,7 +73,7 @@ const AddTransactionModal = ({ isOpen, onClose, onAddTransaction }) => {
           </svg>
           <span className="ml-2">Back</span>
         </button>
-        <h2 className="text-xl py-5 px-40 font-semibold text-white mb-4 text-center border-b border-[#797979]">Record Your Income and Expenses</h2>
+        <h2 className="text-lg md:text-xl py-5 px-20 md:px-40 font-semibold text-white mb-4 text-center border-b border-[#797979]">Record Your Income and Expenses</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-8">
             <label className="block text-white mb-2">Select Type of Transaction</label>
