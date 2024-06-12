@@ -146,12 +146,9 @@ const ContentPlanning = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto md:mx-12">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <Card
-          title="Goals"
-          content={<Goals goals={goals} activeButton={activeButton} handleButtonClick={handleButtonClick} handleApplyClick={handleApplyClick} />}
-        />
+        <Card title="Goals" content={<Goals goals={goals} activeButton={activeButton} handleButtonClick={handleButtonClick} handleApplyClick={handleApplyClick} />} />
         <Card
           title="Know your risk profile"
           content={
@@ -160,13 +157,13 @@ const ContentPlanning = () => {
               <p className="text-center text-lg mb-2">
                 Understanding your risk profile is crucial for making informed investment decisions. Your risk profile helps us tailor investment recommendations that align with your financial goals and comfort level.
               </p>
-              <button className="w-full mt-10 lg:mt-28 p-2 text-lg text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
+              <button className="w-full mt-10 lg:mt-28 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
                 Start the questionnaire
               </button>
             </div>
           }
         />
-  
+
         <Card
           title="Systematic Investment Plan (SIP)"
           content={
@@ -177,7 +174,7 @@ const ContentPlanning = () => {
                 </label>
                 <input type="number" id="investmentValue" placeholder="Ex: Rp5.000.000" className="bg-transparent border border-gray-300 rounded-lg p-2 w-full" />
               </div>
-              <div className="text-lg font-semibold mb-4">
+              <div className="text-lg font-semibold mb-4 mr-auto">
                 <label className="text-lg font-semibold mb-2 block">Frequency:</label>
                 <div className="flex flex-wrap justify-center">
                   <button className="frequency-button border border-white text-white bg-transparent rounded-full p-2 px-4 mr-2 mb-2 hover:bg-blue-500 hover:border-blue-500">Day</button>
@@ -216,13 +213,13 @@ const ContentPlanning = () => {
                   </select>
                 </div>
               </div>
-              <button className="w-full p-2 text-lg text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
+              <button className="w-full mt-0 md:mt-32 p-2 text-2xl text-white rounded-xl shadow-md hover:bg-blue-600" style={{ background: "linear-gradient(to right, #4E2DD1 50%, #8C3FD9 100%)" }}>
                 Activate Reminder
               </button>
             </div>
           }
         />
-  
+
         <Card
           title="Investment Simulation"
           content={
@@ -260,7 +257,7 @@ const ContentPlanning = () => {
           }
         />
       </div>
-  
+
       {showPopup && (
         <PopupGoals
           goals={goals}
@@ -275,11 +272,10 @@ const ContentPlanning = () => {
           handleGenerateClick={handleGenerateClick}
         />
       )}
-  
+
       {showInsight && <Insight insight={insight} handleCloseInsight={handleCloseInsight} />}
     </div>
   );
-  
 };
 
 export default ContentPlanning;

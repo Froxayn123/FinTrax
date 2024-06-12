@@ -10,9 +10,11 @@ const AccountInformation = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [age, setAge] = useState("");
   const [country, setCountry] = useState("");
-  const [userData, setUserData] = useState(null);
   const [accessToken, setAccessToken] = useState("");
   const [updateMessage, setUpdateMessage] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [avatarUrl, setAvatarUrl] = useState("/Avatar.png"); // Default avatar URL
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,12 +30,12 @@ const AccountInformation = () => {
           },
         });
         const userData = userDataResponse.data.payload.datas[0];
-        setUserData(userData);
         setFullname(userData.fullname);
         setEmail(userData.email);
         setPhoneNumber(userData.phone_number);
         setAge(userData.age);
         setCountry(userData.country);
+        setAvatarUrl(userData.avatar_url || "/Avatar.png");
       } catch (error) {
         console.error("Failed to fetch access token or user data:", error.response ? error.response.data : error.message);
         navigate("/login");
@@ -42,6 +44,32 @@ const AccountInformation = () => {
 
     fetchUserData();
   }, [navigate]);
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
+  const handleUploadPhoto = async () => {
+    if (!selectedFile) return;
+
+    const formData = new FormData();
+    formData.append("avatar", selectedFile);
+
+    try {
+      const response = await axios.put(`${import.meta.env.VITE_APP_BASE_API}/users/profile/photo`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        withCredentials: true,
+      });
+      setUpdateMessage("Your photo has been changed");
+      setAvatarUrl(response.data.avatar_url); // Update avatar URL with new URL from the server
+      console.log("Photo updated successfully!");
+    } catch (error) {
+      console.error("Failed to upload photo:", error.response ? error.response.data : error.message);
+    }
+  };
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -62,7 +90,7 @@ const AccountInformation = () => {
           },
         }
       );
-      setUpdateMessage("Your profile has been updated"); 
+      setUpdateMessage("Your profile has been updated");
       console.log("Profile updated successfully!");
     } catch (error) {
       console.error("Failed to update profile:", error.response ? error.response.data : error.message);
@@ -75,8 +103,13 @@ const AccountInformation = () => {
       <form className="flex flex-wrap justify-between gap-4" onSubmit={handleSave}>
         <div className="flex flex-col w-full md:w-[calc(50%-0.5rem)] gap-5">
           <div className="flex items-center gap-4">
-            <img src={userData?.avatar_url || "/Avatar.png"} alt="Profile" className="rounded-full w-16 h-16" />
-            <button className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded [500px] h-[55px]">Change Profile Photo</button>
+            <img src={avatarUrl} alt="Profile" className="rounded-full w-16 h-16" />
+            <div>
+              <input type="file" onChange={handleFileChange} className="flex mb-2 file:bg-transparent file:text-purple-600 file:border file:bg-white file:rounded" />
+              <button type="button" onClick={handleUploadPhoto} className="bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded h-[40px]">
+                Change Profile Photo
+              </button>
+            </div>
           </div>
           <div className="w-full">
             <label className="block mb-1">Name</label>

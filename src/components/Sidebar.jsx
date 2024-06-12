@@ -56,7 +56,7 @@ const Sidebar = () => {
     } else {
       fetchAccessToken();
     }
-  }, [navigate, accessToken]); // Sertakan 'navigate' dan 'accessToken' di sini
+  }, [navigate, accessToken]); 
 
 
   return (

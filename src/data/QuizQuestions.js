@@ -1,18 +1,17 @@
 import Chooser from "../assets/Chooser";
-import DropDown from "../assets/DropDown";
 
 export const quizQuestions = [
   {
     id: "Quiz1",
     no: 1,
     question: "What is your age group?",
-    answers: Chooser(["Under 18", "18-24", "25-34", "35-44", "45-54", "55-64", "65 and above"]),
+    answers: Chooser(["Student", "Employed", "Self-EMployed", "Unemployed"]),
   },
   {
     id: "Quiz2",
     no: 2,
     question: "Where do you live now?",
-    answers: DropDown(),
+    answers: Chooser(["Indonesia", "Malaysia", "Singapore", "Thailand", "Vietnam"]),
   },
   {
     id: "Quiz3",
@@ -41,8 +40,8 @@ export const quizQuestions = [
   {
     id: "Quiz7",
     no: 7,
-    question: "Do you currently use a budget?",
-    answers: Chooser(["Yes, strictly", "Yes, loosely", "No, but i want to start", "No, I dont see the need"]),
+    question: "What is your average monthly income?",
+    answers: Chooser(["< Rp 1.000.000", "Rp 1.000.000 - Rp 2.499.000", "Rp 2.500.000 - Rp 4.499.000", "Rp 5.000.000 - Rp 7.499.000", "No, I dont see the need", "Rp 10.000.000+"]),
   },
   {
     id: "Quiz8",

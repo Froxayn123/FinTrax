@@ -111,7 +111,7 @@ const ContentBudget = () => {
   const chartSize = 100;
 
   return (
-    <div className="p-4 md:mt-2 mt-10 mr-2 rounded-xl">
+    <div className="p-4 md:mt-12 mt-10 mr-2 mx-0 md:mx-12 rounded-xl">
       <div className="flex-none md:flex justify-normal md:justify-between mb-[32px]">
         <div className="flex flex-col">
           <div className="flex-none md:flex-auto">
