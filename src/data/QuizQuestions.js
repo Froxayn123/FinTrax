@@ -41,7 +41,7 @@ export const quizQuestions = [
     id: "Quiz7",
     no: 7,
     question: "What is your average monthly income?",
-    answers: Chooser(["< Rp 1.000.000", "Rp 1.000.000 - Rp 2.499.000", "Rp 2.500.000 - Rp 4.499.000", "Rp 5.000.000 - Rp 7.499.000", "No, I dont see the need", "Rp 10.000.000+"]),
+    answers: Chooser(["< Rp 1.000.000", "Rp 1.000.000 - Rp 2.499.000", "Rp 2.500.000 - Rp 4.499.000", "Rp 5.000.000 - Rp 7.499.000", "Rp 7.500.000 - Rp 10.000.000", "Rp 10.000.000+"]),
   },
   {
     id: "Quiz8",

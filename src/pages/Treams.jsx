@@ -1,4 +1,3 @@
-import React from 'react'
 import Polygon1 from '../assets/Polygon1'
 import Polygon3 from '../assets/Polygon3'
 import Navbar from '../components/Navbar'
@@ -18,17 +17,17 @@ const Treams = () => {
             <h1 className="text-white text-[32px] md:text-[57px] font-medium font-['Roboto']">Terms & Conditions</h1>
           </div>
 
-          <div className="max-w-8xl w-full p-4 md:p-8 rounded-lg shadow-md">
+          <div className="max-w-8xl w-full p-4 md:p-8 rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
               <section className="md:col-span-2 border-l-4 border-white pl-4 md:pl-8 mb-12 md:mb-24">
                 <h3 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8 text-white">
                   Disclaimers and Limitation of Liability
                 </h3>
                 <p className="mt-2 text-gray-300 text-lg md:text-xl font-normal mr-0 md:mr-60">
-                  Disclaimer of Warranties: The site is provided on an "as is" and "as available" basis. Fintrax makes no representations or warranties of any kind, express or implied, regarding the operation or availability of the site or the information, content, or materials included on the site.
+                  Disclaimer of Warranties: The site is provided on an "as is" "and" "as available" basis. Fintrax makes no representations or warranties of any kind, express or implied, regarding the operation or availability of the site or the information, content, or materials included on the site.
                 </p>
                 <p className="mt-4 md:mt-8 text-gray-300 text-lg md:text-xl font-normal mr-0 md:mr-60">
-                  Limitation of Liability: To the fullest extent permitted by law, Fintrax shall not be liable for any damages of any kind arising from the use of the site, including but not limited to direct, indirect, incidental, punitive, and consequential damages.
+                  {"Limitation of Liability: To the fullest extent permitted by law, Fintrax shall not be liable for any damages of any kind arising from the use of the site, including but not limited to direct, indirect, incidental, punitive, and consequential damages."}
                 </p>
               </section>
 
