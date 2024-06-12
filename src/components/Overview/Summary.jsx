@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { TEChart } from "tw-elements-react";
 
 export default function Summary() {
@@ -87,7 +87,7 @@ export default function Summary() {
   return (
     <div style={{ padding: '20px', borderRadius: '10px', color: 'white', maxWidth: '700px', margin: '0 auto' }}>
      <div className="flex items-center mb-2">
-  <h2 className="mr-auto text-lg font-semibold">Summary</h2>
+  <h2 className="mr-auto text-2xl font-semibold">Summary</h2>
   <div className="flex justify-end"> {/* Mengubah kelas flex menjadi flex justify-end */}
     {["Day", "Week", "Month", "Year"].map((periodLabel) => (
       <button

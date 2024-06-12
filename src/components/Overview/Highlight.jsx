@@ -1,5 +1,3 @@
-import React from 'react';
-
 const data = [
   { category: 'Food & Beverages', value: 80000 },
   { category: 'Education', value: 120000 },
