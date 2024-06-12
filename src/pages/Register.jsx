@@ -11,7 +11,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  const [passwordMismatch, setPasswordMismatch] = useState(false); // State untuk menandai jika password dan konfirmasi tidak cocok
+  const [passwordMismatch, setPasswordMismatch] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {

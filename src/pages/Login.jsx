@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   const navigate = useNavigate();
@@ -34,18 +34,18 @@ const Login = () => {
         },
         {
           headers: {
-          "Content-Type": "application/json",
-           Accept: "application/json",
-           },
-           withCredentials: true,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          withCredentials: true,
         }
       );
 
       console.log(response.data);
-
       navigate("/Home");
     } catch (error) {
       console.error("Login error:", error.response ? error.response.data : error.message);
+      setErrorMessage("Invalid email or password. Please try again.");
     }
   };
 
@@ -65,6 +65,7 @@ const Login = () => {
 
         <form onSubmit={handleLogin} className="flex-grow w-96 p-8 sm:p-8 sm:bg-white sm:bg-opacity-5 bg-[#007AFF] bg-opacity-20 flex flex-col justify-center items-center min-h-auto rounded-xl">
           <h1 className="text-2xl sm:text-3xl text-white font-bold mb-4">Login</h1>
+          {errorMessage && <p className="text-red-500 text-sm mb-4">{errorMessage}</p>}
           <div className="flex w-full items-center text-lg relative mb-4">
             <svg className="absolute left-2 top-5 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
               <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
