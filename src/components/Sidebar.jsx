@@ -67,7 +67,7 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <div className={`fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50 transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static`}>
+      <div className={`fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50 transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:sticky top-0`}>
         <LogoNavbar to="/home" />
         <div className="space-y-[48px]">
           <div className="flex flex-col justify-center items-center space-y-[16px]">
