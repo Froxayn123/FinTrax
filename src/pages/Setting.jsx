@@ -392,7 +392,7 @@ const Setting = () => {
       <main className="flex-1 pl-16 pr-16 mt-10">
         <section className="grid grid-cols-4 gap-2">
           <div className="col-span-4 p-4 relative flex items-center justify-between w-full [background:linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%)] shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] backdrop-blur-[7.176966667175293px] rounded-[15px] border-[1.23px] border-solid border-[rgba(255,255,255,0.50)]">
-            <div className="flex flex-col items-center gap-2 self-stretch border-r-[color:var(--Placeholder,#797979)] pt-8 pb-16 border-r border-solid">
+            <div className="flex flex-col items-center gap-2 self-stretch pr-4 border-r-[color:var(--Placeholder,#797979)] pt-8 pb-16 border-r border-solid">
               <nav>
                 <ul>
                   <li className="py-2">
@@ -400,7 +400,10 @@ const Setting = () => {
                       onClick={() => setActiveComponent("AccountInformation")}
                       className="text-base font-semibold flex w-[282px] justify-between items-center hover:border-[color:var(--strokeglass,rgba(255,255,255,0.50))] hover:[background:var(--fillglass,linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%))] hover:shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] hover:backdrop-blur-[7.176966667175293px] px-3 py-1 rounded-lg border-solid"
                     >
-                      Account Information <span>&gt;</span>
+                      Account Information{" "}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right ml-auto" viewBox="0 0 16 16">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                      </svg>
                     </button>
                   </li>
                   <li className="py-2">
@@ -408,7 +411,10 @@ const Setting = () => {
                       onClick={() => setActiveComponent("Preference")}
                       className="text-base font-semibold flex w-[282px] justify-between items-center hover:border-[color:var(--strokeglass,rgba(255,255,255,0.50))] hover:[background:var(--fillglass,linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%))] hover:shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] hover:backdrop-blur-[7.176966667175293px] px-3 py-1 rounded-lg border-solid"
                     >
-                      Preference <span>&gt;</span>
+                      Preference
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right ml-auto" viewBox="0 0 16 16">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                      </svg>
                     </button>
                   </li>
                   <li className="py-2">
@@ -416,7 +422,10 @@ const Setting = () => {
                       onClick={() => setActiveComponent("Subscribe")}
                       className="text-base font-semibold flex w-[282px] justify-between items-center hover:border-[color:var(--strokeglass,rgba(255,255,255,0.50))] hover:[background:var(--fillglass,linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%))] hover:shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] hover:backdrop-blur-[7.176966667175293px] px-3 py-1 rounded-lg border-solid"
                     >
-                      Subscribe <span>&gt;</span>
+                      Subscribe{" "}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right ml-auto" viewBox="0 0 16 16">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                      </svg>
                     </button>
                   </li>
                   <li className="py-2">
@@ -424,7 +433,10 @@ const Setting = () => {
                       onClick={() => setActiveComponent("Help")}
                       className="text-base font-semibold flex w-[282px] justify-between items-center hover:border-[color:var(--strokeglass,rgba(255,255,255,0.50))] hover:[background:var(--fillglass,linear-gradient(113deg,rgba(255,255,255,0.13)_3.51%,rgba(255,255,255,0.00)_111.71%))] hover:shadow-[10.253px_12.303px_20.506px_0px_rgba(0,0,0,0.05)] hover:backdrop-blur-[7.176966667175293px] px-3 py-1 rounded-lg border-solid"
                     >
-                      Help & Support <span>&gt;</span>
+                      Help & Support{" "}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right ml-auto" viewBox="0 0 16 16">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                      </svg>
                     </button>
                   </li>
                   <li className="py-2">
