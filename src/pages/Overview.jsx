@@ -76,8 +76,8 @@ const Overview = () => {
           <div className="col-span-1 sm:col-span-2 p-4 relative flex flex-col lg:flex-row items-center justify-between w-full bg-gradient-to-r from-white/20 to-transparent shadow-lg backdrop-blur rounded-lg border border-white/50">
             <div className="text-left flex-1">
               <h3 className="text-2xl lg:text-3xl font-semibold mb-2">Keep saving, stay wealthy, and smart!</h3>
-              <h3 className="text-sm font-semibold mb-2">Saving now will not make you poor</h3>
-              <button className="mt-2 bg-gradient-to-r from-purple-800 to-purple-600 shadow-md rounded-lg text-white py-1 px-2 text-sm hover:bg-gradient-to-r from-purple-600 to-purple-800">Saving Now</button>
+              <h3 className="text-sm font-semibold mb-4">Saving now will not make you poor</h3>
+              <button className="mt-2 bg-gradient-to-r from-purple-800 to-purple-600 shadow-md rounded-lg text-white py-2 px-4 text-2xl hover:bg-gradient-to-r from-purple-600 to-purple-800">Saving Now</button>
             </div>
             <img src="./KeepSaving.png" alt="" className="w-24 h-24 lg:w-36 lg:h-36 object-contain mr-0 lg:mr-10 mt-4 lg:mt-0" />
           </div>
