@@ -1,9 +1,49 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import BudgetChart from "../components/Overview/BudgetChart";
 import Summary from "../components/Overview/Summary";
 import Calendar from "../components/Overview/Calendar";
 import Sidebar from "../components/Sidebar";
+import axios from "axios";
+
 
 const Overview = () => {
+  const [userData, setUserData] = useState(null);
+  const [accessToken, setAccessToken] = useState("");
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    const fetchAccessToken = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/token`, {}, { withCredentials: true });
+        setAccessToken(response.data.accessToken);
+      } catch (error) {
+        console.error("Failed to fetch access token:", error.response ? error.response.data : error.message);
+        navigate("/login");
+      }
+    };
+
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/users`, {
+          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+        setUserData(response.data.payload.datas[0]);
+      } catch (error) {
+        console.error("Failed to fetch user data:", error.response ? error.response.data : error.message);
+      }
+    };
+
+    if (accessToken) {
+      fetchUserData();
+    } else {
+      fetchAccessToken();
+    }
+  }, [navigate, accessToken]);
+  
   return (
     <div className="min-h-screen [background:var(--Blue-100,#001833)] text-white font-sans flex flex-col lg:flex-row">
       <Sidebar />
@@ -13,7 +53,7 @@ const Overview = () => {
             <h2 className="text-xl font-semibold">Balance:</h2>
             <h2 className="text-2xl font-semibold ml-2">RP1.250.000</h2>
           </div>
-          <span className="text-xl lg:text-2xl font-semibold">Hello, Silvi Putri!👋</span>
+          <span className="text-xl lg:text-2xl font-semibold">Hello, {userData ? userData.username : "Loading..."}!👋</span>
         </header>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
