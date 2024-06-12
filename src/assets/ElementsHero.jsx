@@ -1,3 +1,4 @@
+import React from "react";
 import Element1 from "./Element1";
 import Element2 from "./Element2";
 import Element3 from "./Element3";
@@ -6,7 +7,7 @@ import Element4 from "./Element4";
 const ElementsHero = () => {
   return (
     <>
-      <div className="absolute top-0 end-[625px]">
+      <div className="absolute top-0 end-[625px] hidden md:block">
         <div className="relative">
           <div className="absolute">
             <Element1 />
