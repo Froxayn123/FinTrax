@@ -172,8 +172,8 @@ const Reminders = () => {
     const renderFooter = () => {
       return (
         <div className="flex justify-end mt-4">
-          <button className="h-[45px] w-[150px] bg-transparent border  text-white px-4 py-1 rounded-lg mr-4 hover:bg-purple-500">Cancel</button>
-          <button className="w-[150px] bg-purple-500 text-white px-4 py-1 rounded-lg" onClick={handleAddReminder}>
+          <button className="h-[45px] w-[100px] bg-transparent border  text-white px-4 py-1 rounded-lg mr-4 hover:bg-purple-500">Cancel</button>
+          <button className="w-[100px] bg-purple-500 text-white px-4 py-1 rounded-lg" onClick={handleAddReminder}>
             New
           </button>
         </div>

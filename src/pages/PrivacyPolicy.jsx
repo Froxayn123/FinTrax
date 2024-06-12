@@ -11,18 +11,18 @@ const PrivacyPolicy = () => {
       <header>
         <Navbar />
       </header>
-      <main className="mx-[100px]">
-        <div className="flex flex-col justify-center items-center mt-[200px] space-y-[100px]">
-          <div className="flex flex-col justify-center items-center space-y-[32px]">
-            <div>
-            <h1 className="text-white text-[57px] font-medium font-['Roboto']">Privacy Policy</h1>
-            <p className="text-white text-center">Effective Date : 31 Oktober 2023 </p></div>
-            <p className="text-center text-gray-100 text-xl font-normal font-['Roboto']">
-              Welcome to Fintrax! We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website
-              [www.fintrax.com] or use our services. Please read this policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
-            </p>
-          </div>
-          <div className="w-[1040px] space-y-[60px]">
+      <main className="mx-[20px] md:mx-[100px]">
+  <div className="flex flex-col justify-center items-center mt-[20px] md:mt-[200px] space-y-[20px] md:space-y-[100px]">
+    <div className="flex flex-col justify-center items-center space-y-[20px] md:space-y-[32px] mt-40 md:mt-10">
+      <div>
+        <h1 className="text-white text-[57px] md:text-[57px] font-medium font-['Roboto']">Privacy Policy</h1>
+        <p className="text-white text-center">Effective Date : 31 Oktober 2023 </p>
+      </div>
+      <p className="text-center text-gray-100 text-lg md:text-xl font-normal font-['Roboto']">
+        Welcome to Fintrax! We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [www.fintrax.com] or use our services. Please read this policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
+      </p>
+    </div>
+    <div className="w-full md:w-[1040px] space-y-[20px] md:space-y-[60px]">
           <div className="flex flex-col text-justify justify-center items-start space-y-[32px] max-w-[950px]">
             <h2 className="text-white text-[32px] font-medium font-['Roboto']">1. Information We Collect</h2>
             <p className="text-gray-100 text-lg font-normal font-['Roboto']">

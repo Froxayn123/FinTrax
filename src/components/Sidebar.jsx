@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import LogoNavbar from "../assets/LogoNavbar";
 import { navDashDatas } from "../data/NavDashDatas";
 import NavDash from "./NavDash";
 import Iconlogout from "../assets/iconlogout";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import LogoSidebar from "../assets/LogoSidebar";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +56,7 @@ const Sidebar = () => {
     } else {
       fetchAccessToken();
     }
-  }, [navigate, accessToken]); 
+  }, [navigate, accessToken]); // Sertakan 'navigate' dan 'accessToken' di sini
 
 
   return (
@@ -68,7 +68,7 @@ const Sidebar = () => {
       </div>
 
       <div className={`fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50 transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:sticky top-0`}>
-        <LogoNavbar to="/home" />
+        <LogoSidebar to="/home" />
         <div className="space-y-[48px]">
           <div className="flex flex-col justify-center items-center space-y-[16px]">
             <img src={userData?.avatar_url || "/Avatar2.png"} alt="" className="w-24 h-24 rounded-full" />
