@@ -20,12 +20,12 @@ const NavbarHome = () => {
       }
     };
 
-    const fetchUserData = async () => {
+    const fetchUserData = async (token) => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/users`, {
           withCredentials: true,
           headers: {
-            Authorization: `Bearer ${accessToken}`,
+            Authorization: `Bearer ${token}`,
           },
         });
         setUserData(response.data.payload.datas[0]);
@@ -35,7 +35,7 @@ const NavbarHome = () => {
     };
 
     if (accessToken) {
-      fetchUserData();
+      fetchUserData(accessToken);
     } else {
       fetchAccessToken();
     }

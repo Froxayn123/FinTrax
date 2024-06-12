@@ -1,4 +1,3 @@
-import React from "react";
 import Element1 from "./Element1";
 import Element2 from "./Element2";
 import Element3 from "./Element3";

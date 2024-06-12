@@ -2,7 +2,7 @@ const Arrow = () => {
   return (
     <>
  <div className="hidden md:block absolute -bottom-[1500px] start-[500px] -z-50">
- <svg xmlns="http://www.w3.org/2000/svg" width="255" height="278" viewBox="0 0 255 278" fill="none">          <g id="Group 10">
+    <svg xmlns="http://www.w3.org/2000/svg" width="255" height="278" viewBox="0 0 255 278" fill="none">          <g id="Group 10">
             <path id="Vector" d="M214.97 100.093L226.101 118.892L242.765 71.952L197.164 93.8863L214.97 100.093Z" fill="#66AFFF" />
             <path id="Vector_2" opacity="0.5" d="M214.97 100.093L226.101 118.892L242.765 71.952L197.164 93.8863L214.97 100.093Z" fill="#ECEFF5" />
             <path id="Vector_3" d="M242.272 72.1924L210.751 98.6359L214.971 100.093L216.797 103.154L242.272 72.1924Z" fill="#66AFFF" />
