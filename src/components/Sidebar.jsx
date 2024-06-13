@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.delete(`${import.meta.env.VITE_APP_BASE_API}/logout`, { withCredentials: true });
+      await axios.delete(`http://localhost:8080/api/v1/logout`, { withCredentials: true });
       navigate("/login");
     } catch (error) {
       console.error("Logout error:", error.response ? error.response.data : error.message);
@@ -29,7 +29,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/token`, {}, { withCredentials: true });
+        const response = await axios.get(`http://localhost:8080/api/v1/token`, {}, { withCredentials: true });
         setAccessToken(response.data.accessToken);
       } catch (error) {
         console.error("Failed to fetch access token:", error.response ? error.response.data : error.message);
@@ -39,7 +39,7 @@ const Sidebar = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/users`, {
+        const response = await axios.get(`http://localhost:8080/api/v1/users`, {
           withCredentials: true,
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -58,7 +58,6 @@ const Sidebar = () => {
     }
   }, [navigate, accessToken]); // Sertakan 'navigate' dan 'accessToken' di sini
 
-
   return (
     <>
       <div className="fixed top-4 left-4 z-50 md:hidden">
@@ -67,7 +66,9 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <div className={`fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50 transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:sticky top-0`}>
+      <div
+        className={`fixed h-screen p-[48px] flex flex-col justify-start items-center bg-[#0D243D] space-y-[64px] z-50 transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:sticky top-0`}
+      >
         <LogoSidebar to="/home" />
         <div className="space-y-[48px]">
           <div className="flex flex-col justify-center items-center space-y-[16px]">

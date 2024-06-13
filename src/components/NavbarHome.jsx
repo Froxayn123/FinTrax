@@ -12,7 +12,7 @@ const NavbarHome = () => {
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/token`, { withCredentials: true });
+        const response = await axios.get(`http://localhost:8080/api/v1/token`, { withCredentials: true });
         setAccessToken(response.data.accessToken);
       } catch (error) {
         console.error("Failed to fetch access token:", error.response ? error.response.data : error.message);
@@ -22,7 +22,7 @@ const NavbarHome = () => {
 
     const fetchUserData = async (token) => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/users`, {
+        const response = await axios.get(`http://localhost:8080/api/v1/users`, {
           withCredentials: true,
           headers: {
             Authorization: `Bearer ${token}`,
