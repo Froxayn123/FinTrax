@@ -1,11 +1,8 @@
 import Button from "./Button";
 // import anime from "animejs";
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
 
-const HeroIntro = ({ url }) => {
-  const navigate = useNavigate();
-
+const HeroIntro = ({ func }) => {
   return (
     <>
       <div className="py-[184px] w-[512px] space-y-[24px] text-center md:text-left">
@@ -19,7 +16,7 @@ const HeroIntro = ({ url }) => {
         <Button
           title="get started"
           colors={"bg-gradient-primary"}
-          onClick={() => navigate(url)}
+          onClick={() => func()}
           className="mx-auto md:mx-0" // Membuat tombol menjadi rata tengah secara horizontal di layar ponsel
         />
       </div>
@@ -30,13 +27,5 @@ const HeroIntro = ({ url }) => {
 export default HeroIntro;
 
 HeroIntro.propTypes = {
-  url: PropTypes.string,
+  func: PropTypes.func,
 };
-
-// {
-//   anime({
-//     targets: document.getElementById("QuizForm"),
-//     translateX: "-50%",
-//     translateY: "-50%",
-//   });
-// }

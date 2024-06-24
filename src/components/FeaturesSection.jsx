@@ -3,15 +3,13 @@ import FeatureCard from "../assets/FeatureCard";
 import { features } from "../data/Features";
 import FeaturePopup from "../assets/FeaturePopup";
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
 
-const FeaturesSection = ({ url }) => {
+const FeaturesSection = ({ func }) => {
   const [selectedFeature, setSelectedFeature] = useState(null);
-  const navigate = useNavigate();
 
-  // const handleCardClick = (feature) => {
-  //   setSelectedFeature(feature);
-  // };
+  const handleCardClick = (feature) => {
+    setSelectedFeature(feature);
+  };
 
   const handleClosePopup = () => {
     setSelectedFeature(null);
@@ -30,7 +28,7 @@ const FeaturesSection = ({ url }) => {
           </div>
         </div>
         {features.map((feature) => (
-          <FeatureCard key={feature.id} img={feature.img} title={feature.title} desc={feature.desc} onClick={() => navigate(url)} />
+          <FeatureCard key={feature.id} img={feature.img} title={feature.title} desc={feature.desc} onClick={!func ? () => handleCardClick(feature) : () => func()} />
         ))}
       </section>
       {selectedFeature && <FeaturePopup feature={selectedFeature} onClose={handleClosePopup} />}
@@ -41,5 +39,5 @@ const FeaturesSection = ({ url }) => {
 export default FeaturesSection;
 
 FeaturesSection.propTypes = {
-  url: PropTypes.string,
+  func: PropTypes.func,
 };

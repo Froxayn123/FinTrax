@@ -1,11 +1,11 @@
 import HeroIntro from "../assets/HeroIntro";
 import PropTypes from "prop-types";
 
-const HeroSection = ({ url }) => {
+const HeroSection = ({ func }) => {
   return (
     <>
       <section className="mt-[140px]">
-        <HeroIntro url={url} />
+        <HeroIntro func={func} />
       </section>
     </>
   );
@@ -14,5 +14,5 @@ const HeroSection = ({ url }) => {
 export default HeroSection;
 
 HeroSection.propTypes = {
-  url: PropTypes.string,
+  func: PropTypes.func,
 };

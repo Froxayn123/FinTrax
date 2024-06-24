@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      await axios.post(
         `http://localhost:8080/api/v1/login`,
         {
           email: email,
@@ -41,7 +41,6 @@ const Login = () => {
         }
       );
 
-      console.log(response.data);
       navigate("/Home");
     } catch (error) {
       setErrorMessage(error.response.data.payload.message);

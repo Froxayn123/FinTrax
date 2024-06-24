@@ -1,7 +1,12 @@
-const LoginButton = () => {
+import PropTypes from "prop-types";
+
+const LoginButton = ({ func }) => {
   return (
     <>
-      <button className="px-[24px] py-[10px] rounded-[8px] font-roboto text-[22px] capitalize border border-[#ECEFF5] text-[#ECEFF5] hover:bg-[#8C3FD9] hover:border-[#8C3FD9] hover:drop-shadow-[0px_3px_3px_rgba(0,0,0,0.75)] transition-all ease-in-out duration-300">
+      <button
+        onClick={() => func()}
+        className="px-[24px] py-[10px] rounded-[8px] font-roboto text-[22px] capitalize border border-[#ECEFF5] text-[#ECEFF5] hover:bg-[#8C3FD9] hover:border-[#8C3FD9] hover:drop-shadow-[0px_3px_3px_rgba(0,0,0,0.75)] transition-all ease-in-out duration-300"
+      >
         login
       </button>
     </>
@@ -9,3 +14,7 @@ const LoginButton = () => {
 };
 
 export default LoginButton;
+
+LoginButton.propTypes = {
+  func: PropTypes.func,
+};

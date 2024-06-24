@@ -20,7 +20,7 @@ const Sidebar = () => {
   const handleLogout = async () => {
     try {
       await axios.delete(`http://localhost:8080/api/v1/logout`, { withCredentials: true });
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error("Logout error:", error.response ? error.response.data : error.message);
     }
