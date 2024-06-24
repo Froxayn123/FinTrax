@@ -7,7 +7,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Verifikasi from "./pages/VerifikasiAkun";
 import Register from "./pages/Register";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
@@ -16,10 +16,10 @@ import Notification from "./pages/Notification";
 import Blog from "./pages/Blog";
 import BlogDetail from "./components/BlogDetail";
 import Setting from "./pages/Setting";
-import About from "./pages/About"; 
-import PrivacyPolicy from "./pages/PrivacyPolicy"; 
-import FinancialTips from "./pages/FinancialTips"; 
-import AdminUser from "./pages/AdminUser"; 
+import About from "./pages/About";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import FinancialTips from "./pages/FinancialTips";
+import AdminUser from "./pages/AdminUser";
 import AdminContent from "./pages/AdminContent";
 import AdminSetting from "./pages/AdminSetting";
 import Dashboard_Admin from "./pages/Dashboard_Admin";
@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verifikasi" element={<Verifikasi />} />
-        <Route path="/home" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/overview" element={<Overview />} />
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/budget" element={<Budget />} />

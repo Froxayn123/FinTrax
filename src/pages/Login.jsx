@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -44,8 +44,7 @@ const Login = () => {
       console.log(response.data);
       navigate("/Home");
     } catch (error) {
-      console.error("Login error:", error.response ? error.response.data : error.message);
-      setErrorMessage("Invalid email or password. Please try again.");
+      setErrorMessage(error.response.data.payload.message);
     }
   };
 
@@ -70,13 +69,13 @@ const Login = () => {
             <svg className="absolute left-2 top-5 transform -translate-y-1/2" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
               <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
             </svg>
-            <input type="text" placeholder="Username" className="w-full border rounded-lg py-2 px-3 pl-10" value={email} onChange={(e) => setUsername(e.target.value)} />
+            <input type="email" placeholder="E-mail" className="w-full border rounded-lg py-2 px-3 pl-10" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className="flex w-full items-center text-lg relative mb-4">
             <svg className="absolute left-3 top-5 transform -translate-y-1/2" width="20" viewBox="0 0 24 24" style={{ fill: "#718096" }}>
               <path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path>
             </svg>
-            <input type="password" placeholder="Password" className="w-full border rounded-lg py-2 px-3 pl-10" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder="Password" className="w-full border rounded-lg py-2 px-3 pl-10" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
           <div className="flex flex-wrap mb-6 items-center justify-between w-full">
             <div className="w-full sm:w-auto mb-2 sm:mb-0">
