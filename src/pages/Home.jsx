@@ -1,4 +1,3 @@
-import Navbar from "../components/NavbarHome";
 import HeroSection from "../components/HeroSection";
 import ElementsHero from "../assets/ElementsHero";
 import Polygon1 from "../assets/Polygon1";
@@ -18,6 +17,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
+import NavbarHome from "../components/NavbarHome";
 
 const Home = () => {
   const counter = useSelector((state) => state.counterQuiz.counter);
@@ -50,7 +50,7 @@ const Home = () => {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_API}/token`, {}, { withCredentials: true });
+      const response = await axiosJWT.get(`${import.meta.env.VITE_APP_BASE_API}/token`, {}, { withCredentials: true });
       setToken(response.data.accessToken);
     } catch (error) {
       console.error("Failed to fetch access token:", error.response ? error.response.data : error.message);
@@ -66,7 +66,7 @@ const Home = () => {
       <Polygon4 />
       <ElementsHero />
       <header className="mx-[100px]">
-        <Navbar />
+        <NavbarHome />
       </header>
       <main className="mx-[100px]">
         <HeroSection />
