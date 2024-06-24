@@ -21,12 +21,12 @@ const LandingPage = () => {
       <Polygon4 />
       <ElementsHero />
       <header className="mx-[100px]">
-        <Navbar />
+        <Navbar url="/login" />
       </header>
       <main className="mx-[100px]">
-        <HeroSection />
-        <FeaturesSection />
-        <ArticlesSection />
+        <HeroSection url="/login" />
+        <FeaturesSection url="/login" />
+        <ArticlesSection url="/login" />
         <KeyFeaturesSection />
       </main>
       <footer>

@@ -7,7 +7,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Verifikasi from "./pages/VerifikasiAkun";
 import Register from "./pages/Register";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 import Transaction from "./pages/Transaction";
 import Budget from "./pages/Budget";
@@ -40,27 +40,27 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/ForgotPassword" element={<ForgotPassword />} />
-        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/forgot" element={<ForgotPassword />} />
+        <Route path="/reset" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verifikasi" element={<Verifikasi />} />
-        {/* <Route path="/home" element={<Home />} /> */}
+        <Route path="/home" element={<Home />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/budget" element={<Budget />} />
         <Route path="/planning" element={<Planning />} />
         <Route path="/notification" element={<Notification />} />
-        <Route path="/Setting" element={<Setting />} />
+        <Route path="/setting" element={<Setting />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/about" element={<About />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-        <Route path="/Treams" element={<Treams />}></Route>
-        <Route path="/FinancialTips" element={<FinancialTips />} />
-        <Route path="/AdminDashboard" element={<Dashboard_Admin />} />
-        <Route path="/AdminUser" element={<AdminUser />} />
-        <Route path="/AdminContent" element={<AdminContent />} />
-        <Route path="/AdminSetting" element={<AdminSetting />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Treams />}></Route>
+        <Route path="/financialtips" element={<FinancialTips />} />
+        <Route path="/admindashboard" element={<Dashboard_Admin />} />
+        <Route path="/adminuser" element={<AdminUser />} />
+        <Route path="/admincontent" element={<AdminContent />} />
+        <Route path="/adminsetting" element={<AdminSetting />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
