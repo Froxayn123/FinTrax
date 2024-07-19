@@ -1,28 +1,47 @@
-import UnderNav from "../assets/UnderNav";
-
 export const navigations = [
   {
-    id: "nav1",
-    title: "home",
-    to: "/",
-    icon: UnderNav(),
+    name: "Navbar",
+    datas: [
+      {
+        id: "nav1",
+        title: "home",
+        to: "/",
+      },
+      {
+        id: "nav2",
+        title: "feature",
+        to: "/#feature-section",
+      },
+      {
+        id: "nav3",
+        title: "blog",
+        to: "/blog",
+      },
+      {
+        id: "nav4",
+        title: "about us",
+        to: "/about",
+      },
+    ],
   },
   {
-    id: "nav2",
-    title: "feature",
-    to: "/#feature-section",
-    icon: UnderNav(),
-  },
-  {
-    id: "nav3",
-    title: "blog",
-    to: "/blog",
-    icon: UnderNav(),
-  },
-  {
-    id: "nav4",
-    title: "about us",
-    to: "/about",
-    icon: UnderNav(),
+    name: "Transaction",
+    datas: [
+      {
+        id: "trans1",
+        title: "All Transaction",
+        to: "/transaction?category=all",
+      },
+      {
+        id: "trans2",
+        title: "Income",
+        to: "/transaction?category=income",
+      },
+      {
+        id: "trans3",
+        title: "Expenses",
+        to: "/transaction?category=expenses",
+      },
+    ],
   },
 ];

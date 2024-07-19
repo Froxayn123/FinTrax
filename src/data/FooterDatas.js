@@ -1,6 +1,6 @@
-import LocationIcon from "../assets/LocationIcon";
-import MailIcon from "../assets/MailIcon";
-import CallIcon from "../assets/CallIcon";
+import LocationIcon from "@/components/svg/LocationIcon";
+import MailIcon from "@/components/svg/MailIcon";
+import PhoneIcon from "@/components/svg/PhoneIcon";
 
 export const FooterDatas = {
   id: "footerDatasCenter",
@@ -9,15 +9,15 @@ export const FooterDatas = {
       name: "Contact Us",
       link: [
         {
-          icon: LocationIcon(),
+          icon: LocationIcon("stroke-white"),
           text: "St. Sudirman 52361, Jakarta",
         },
         {
-          icon: MailIcon(),
-          text: "fintraxsupport@gmail.ac.id",
+          icon: MailIcon("fill-white"),
+          text: "fintraxsupport@gmailIcon.ac.id",
         },
         {
-          icon: CallIcon(),
+          icon: PhoneIcon("fill-white"),
           text: "+62 88765432109",
         },
       ],
@@ -50,11 +50,11 @@ export const FooterDatas = {
       link: [
         {
           text: "Privacy policy",
-          to: "/PrivacyPolicy"
+          to: "/privacypolicy",
         },
         {
           text: "Terms & condition",
-          to: "/Treams"
+          to: "/terms",
         },
       ],
     },

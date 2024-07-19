@@ -1,69 +1,55 @@
-import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import NotFound from "./pages/NotFound";
-import LandingPage from "./pages/LandingPage";
-import Login from "./pages/Login";
-import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
-import Verifikasi from "./pages/VerifikasiAkun";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import Overview from "./pages/Overview";
-import Transaction from "./pages/Transaction";
-import Budget from "./pages/Budget";
-import Planning from "./pages/Planning";
-import Notification from "./pages/Notification";
-import Blog from "./pages/Blog";
-import BlogDetail from "./components/BlogDetail";
-import Setting from "./pages/Setting";
-import About from "./pages/About";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import FinancialTips from "./pages/FinancialTips";
-import AdminUser from "./pages/AdminUser";
-import AdminContent from "./pages/AdminContent";
-import AdminSetting from "./pages/AdminSetting";
-import Dashboard_Admin from "./pages/Dashboard_Admin";
-import Treams from "./pages/Treams";
+import { Routes, Route } from "react-router-dom";
+import NotFoundPage from "@/pages/NotFoundPage";
+import LoginPage from "@/pages/LoginPage";
+import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
+import ResetPasswordPage from "@/pages/ResetPasswordPage";
+import RegisterPage from "@/pages/RegisterPage";
+import HomePage from "@/pages/HomePage";
+import OverviewPage from "@/pages/User/OverviewPage";
+import TransactionPage from "@/pages/User/TransactionPage";
+import BudgetPage from "@/pages/User/BudgetPage";
+import PlanningPage from "@/pages/User/PlanningPage";
+import NotificationPage from "@/pages/User/NotificationPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogDetail from "@/components/All/BlogDetail";
+import SettingPage from "@/pages/User/SettingPage";
+import AboutUsPage from "@/pages/AboutUsPage";
+import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
+import FinancialTipsPage from "@/pages/FinancialTipsPage";
+import AdminUserPage from "@/pages/Admin/AdminUserPage";
+import AdminContentPage from "@/pages/Admin/AdminContentPage";
+import AdminSettingPage from "@/pages/Admin/AdminSettingPage";
+import DashboardAdminPage from "@/pages/Admin/AdminDashboardPage";
+import TermsPage from "@/pages/TermsPage";
+import VerifiedPage from "@/pages/VerifiedPage";
 
 const App = () => {
-  const location = useLocation();
-
-  React.useEffect(() => {
-    const element = document.getElementById(location.hash.substring(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
-
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot" element={<ForgotPassword />} />
-        <Route path="/reset" element={<ResetPassword />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/verifikasi" element={<Verifikasi />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/transaction" element={<Transaction />} />
-        <Route path="/budget" element={<Budget />} />
-        <Route path="/planning" element={<Planning />} />
-        <Route path="/notification" element={<Notification />} />
-        <Route path="/setting" element={<Setting />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<Treams />}></Route>
-        <Route path="/financialtips" element={<FinancialTips />} />
-        <Route path="/admindashboard" element={<Dashboard_Admin />} />
-        <Route path="/adminuser" element={<AdminUser />} />
-        <Route path="/admincontent" element={<AdminContent />} />
-        <Route path="/adminsetting" element={<AdminSetting />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/forgot" element={<ForgotPasswordPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/reset" element={<ResetPasswordPage />} />
+      <Route path="/verification" element={<VerifiedPage />} />
+      <Route path="/overview" element={<OverviewPage />} />
+      <Route path="/transaction" element={<TransactionPage />} />
+      <Route path="/budget" element={<BudgetPage />} />
+      <Route path="/planning" element={<PlanningPage />} />
+      <Route path="/notification" element={<NotificationPage />} />
+      <Route path="/setting" element={<SettingPage />} />
+      <Route path="/dashboard" element={<DashboardAdminPage />} />
+      <Route path="/user" element={<AdminUserPage />} />
+      <Route path="/content" element={<AdminContentPage />} />
+      <Route path="/setting" element={<AdminSettingPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:id" element={<BlogDetail />} />
+      <Route path="/about" element={<AboutUsPage />} />
+      <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms" element={<TermsPage />}></Route>
+      <Route path="/financialtips" element={<FinancialTipsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 };
 
