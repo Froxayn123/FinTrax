@@ -1,51 +1,51 @@
-import Iconbudget from "../assets/iconbudget";
-import IconOverview from "../assets/iconoverview";
-import icontransaksi from "../assets/icontransaksi";
-import Iconplanning from "../assets/iconplanning";
-import iconnotif from "../assets/iconnotif";
-import iconsettings from "../assets/iconsetting";
+import OverviewIcon from "@/components/svg/OverviewIcon";
+import TransactionIcon from "@/components/svg/TransactionIcon";
+import BudgetIcon from "@/components/svg/BudgetIcon";
+import PlanningIcon from "@/components/svg/PlanningIcon";
+import NotificationIcon from "@/components/svg/NotificationIcon";
+import SettingsIcon from "@/components/svg/SettingsIcon";
 
 export const navDashDatas = [
   {
     id: "navDash1",
     title: "Overview",
-    icon: IconOverview("#ffffff"),
-    iconSelected: IconOverview("#001833"),
+    icon: OverviewIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: OverviewIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/overview",
   },
   {
     id: "navDash2",
     title: "Transaction",
-    icon: icontransaksi("#ffffff"),
-    iconSelected: icontransaksi("#001833"),
+    icon: TransactionIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: TransactionIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/transaction",
   },
   {
     id: "navDash3",
     title: "Budget",
-    icon: Iconbudget("#ffffff"),
-    iconSelected: Iconbudget("#001833"),
+    icon: BudgetIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: BudgetIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/budget",
   },
   {
     id: "navDash4",
     title: "Planning",
-    icon: Iconplanning("#ffffff"),
-    iconSelected: Iconplanning("#001833"),
+    icon: PlanningIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: PlanningIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/planning",
   },
   {
     id: "navDash5",
     title: "Notification",
-    icon: iconnotif("#ffffff"),
-    iconSelected: iconnotif("#001833"),
+    icon: NotificationIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: NotificationIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/notification",
   },
   {
     id: "navDash6",
     title: "Setting",
-    icon: iconsettings("#ffffff"),
-    iconSelected: iconsettings("#001833"),
+    icon: SettingsIcon("stroke-white group-hover:stroke-[#001833]"),
+    iconSelected: SettingsIcon("stroke-[#001833] group-hover:stroke-[#001833]"),
     to: "/setting",
   },
 ];
